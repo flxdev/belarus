@@ -53,6 +53,21 @@ a {
 	max-width: 1200px;
 	margin: 0 auto;
 	padding: 0 15px;
+	position: relative;
+	@include clearfix;
+	@include r(1200) {
+		max-width: 980px;
+	}
+	@include r(980) {
+		max-width: 736px;
+		padding: 0 10px;
+	}
+	// @include r(735) {
+	// 	max-width: 540px;
+	// }
+	// @include r(539) {
+	// 	max-width: 480px;
+	// }
 }
 .viewport {
 	height: 100%;
@@ -73,6 +88,7 @@ a {
 		@include x-rem(height, 39px);
 		background-image: url(../img/pattern/pattern-orna-blue.png);
 		position: relative;
+		z-index: 2;
 		&::before {
 			content: '';
 			background-color: #0083c2;
@@ -82,6 +98,7 @@ a {
 			width: 100%;
 			height: 100%;
 			opacity: 0.6;
+			z-index: -1;
 		}
 		&::after {
 			content: '';
@@ -92,6 +109,31 @@ a {
 			left: 0;
 			width: 100%;
 			height: 100%;
+			z-index: -1;
+		}
+		.link {
+			@include x-rem(width, 170px);
+			float: right;
+			text-align: center;
+			@include x-rem(padding, 6px 0 12px);
+			position: relative;
+			text-align: center;
+			@include r(400) {
+				width: 50%;
+			}
+			span {
+				font-family: $R;
+				@include x-rem(font-size, 13px);
+				color: $white;
+				border-bottom: 1px solid;
+				transition: color 0.3s ease, border-color 0.3s ease;
+			}
+			&:hover {
+				span {
+					color: $yellow;
+					border-color: $yellow;
+				}
+			}
 		}
 	}
 	.header-row {
@@ -104,16 +146,29 @@ a {
 			background-size: cover;
 			float: left;
 			@include x-rem(margin, 0 69px 0 6px);
+			display: block;
+			@include r(735) {
+				float: none;
+			}
 		}
 		.nav-btn {
 			float: right;
 			font-size: 0;
 			@include x-rem(margin, 7px 0 0 0);
+			@include r(735) {
+				float: none;
+				width: 100%;
+				display: block;
+				@include x-rem(margin, 37px 0 0 0);
+			}
 		}
 		.btn {
 			@include x-rem(width, 170px);
-			&:not(:last-child) {
+			&:not(:last-of-type) {
 				@include x-rem(margin, 0 30px 0 0);
+			}
+			@include r(410) {
+				@include x-rem(margin, 15px 0px 0 0);
 			}
 		}
 	}
@@ -122,13 +177,14 @@ a {
 	box-shadow: 0px -1px 22px 0px rgba(0, 0, 0, 0.15);
 	.footer-top {
 		background-color: $Lgrey;
-		@include x-rem(height, 70px);
+		// @include x-rem(height, 70px);
 	}
 	.footer-middle {
-		@include x-rem(height, 280px);
+		// @include x-rem(height, 280px);
 		position: relative;
 		@include x-rem(padding, 29px 0);
 		background-image: url(../img/pattern/pattern-orna-blue.png);
+		@include clearfix;
 		&::before {
 			content: '';
 			background-color: $Dblue;
@@ -151,6 +207,25 @@ a {
 			background-repeat: no-repeat;
 			background-size: cover;
 		}
+		@include r(735) {
+			.form {
+				max-width: 290px;
+				display: inline-block;
+				width: 100%;
+			}
+			.coord {
+				max-width: 290px;
+				text-align: left;
+				display: inline-block;
+				width: 100%;
+			}
+			.media {
+				max-width: 290px;
+				display: inline-block;
+				width: 100%;
+				text-align: left;
+			}
+		}
 	}
 	.footer-bottom {
 		background-color: $Lgrey;
@@ -164,11 +239,21 @@ a {
 	.footer-col {
 		width: 33.33%;
 		float: left;
+		@include r(980) {
+			width: 50%;
+		}
+		@include r(735) {
+			width: 100%;
+			text-align: center;
+		}
 		&:first-of-type {
 			padding: 0 1.9% 0 0;
 		}
 		&:nth-of-type(2) {
 			padding: 0 7.09%;
+			@include r(1200) {
+				padding: 0 4.5%;
+			}
 		}
 		&:nth-of-type(3) {
 			padding: 0 0.3%;
@@ -261,6 +346,11 @@ a {
 			@include x-rem(height, 44px);
 			display: inline-block;
 			@include x-rem(margin-left, 15px);
+			@include r(735) {
+				&:first-child {
+					margin-left: 0;
+				}
+			}
 			&.media-item_fb {
 				a {
 					&::after {
@@ -400,6 +490,9 @@ a {
 }
 .header-nav {
 	@include x-rem(padding, 6px 0);
+	@include r(1200) {
+		display: none;
+	}
 	ul {
 		font-size: 0;
 	}
@@ -433,6 +526,10 @@ a {
 		display: inline-block;
 		vertical-align: top;
 		@include x-rem(margin, 9px 19px 9px 0);
+		@include r(735) {
+			width: 100%;
+			margin-right: 0;
+		}
 		a {
 			font-family: $RLight;
 			@include x-rem(font-size, 16px);
@@ -443,6 +540,214 @@ a {
 			transition: border-color 0.3s ease;
 			&:hover {
 				border-color: $blue;
+			}
+		}
+	}
+}
+.lang {
+	@include x-rem(width, 170px);
+	float: right;
+	text-align: center;
+	@include x-rem(padding, 9px 0);
+	position: relative;
+	@include x-rem(margin, 0 0 0 30px);
+	@include r(400) {
+		margin: 0;
+		width: 50%;
+	}
+	.lang-trigger {
+		text-align: right;
+		@include x-rem(padding, 0 40px 0 5px);
+		cursor: pointer;
+		position: relative;
+		&::after {
+			content: '';
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 5px 3px 0 3px;
+			border-color: $white transparent transparent transparent;
+			position: absolute;
+			@include x-rem(right, 20px);
+			@include x-rem(top, 8px);
+			transition: border-color 0.3s ease;
+		}
+	}
+	.item {
+		font-family: $R;
+		@include x-rem(font-size, 13px);
+		color: $white;
+		transition: color 0.3s ease;
+		display: inline-block;
+		vertical-align: middle;
+		.icon {
+			@include x-rem(width, 20px);
+			@include x-rem(height, 20px);
+			display: inline-block;
+			vertical-align: middle;
+			margin-left: 3px;
+			border-radius: 100%;
+			&.icon-rus {
+				background-image: url(../img/icons/icon-rus.png);
+				background-size: cover;
+			}
+			&.icon-by {
+				background-image: url(../img/icons/icon-by.png);
+				background-size: cover;
+			}
+			&.icon-en {
+				background-image: url(../img/icons/icon-en.png);
+				background-size: cover;
+			}
+		}
+	}
+	.lang-list {
+		background-color: $white;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+		text-align: right;
+		box-shadow: 0px -1px 10px 0px rgba(0, 0, 0, 0.2);
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity 0.15s ease, visibility 0.15s ease;
+		@include x-rem(padding, 4px 0 8px);
+		.selected {
+			.item {
+				span {
+					color: $blue;
+					border-color: $blue;
+				}
+			}
+		}
+		.item {
+			@include x-rem(padding, 8px 40px 8px 5px);
+			span {
+				border-bottom: 1px solid transparent;
+				transition: border-color 0.3s ease;
+				color: #bbb;
+			}
+			.icon {
+				box-shadow: 0px -1px 7px 0px rgba(0, 0, 0, 0.2);
+			}
+		}
+	}
+	&:hover {
+		.lang-trigger {
+			&::after {
+				border-color: $yellow transparent transparent transparent
+			}
+			.item {
+				color: $yellow;
+			}
+		}
+		.lang-list {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+}
+.burger {
+	width: 40px;
+	height: 24px;
+	display: none;
+	vertical-align: middle;
+	@include x-rem(margin-left, 30px);
+	@include r(1200) {
+		display: inline-block;
+	}
+	@include r(735) {
+		position: absolute;
+		top: 0;
+		@include x-rem(right, 15px);
+	}
+	span {
+		height: 4px;
+		width: 100%;
+		background-color: $grey;
+		display: block;
+		position: relative;
+		&::after {
+			content: '';
+			width: 100%;
+			left: 0;
+			position: absolute;
+			height: 4px;
+			top: -10px;
+			background-color: $grey;
+		}
+		&::before {
+			content: '';
+			width: 100%;
+			height: 4px;
+			left: 0;
+			bottom: -10px;
+			background-color: $grey;
+			position: absolute;
+		}
+	}
+}
+.main__head {
+	height: 700px;
+	background-image: url(../img/main-head.jpg);
+	background-size: cover;
+	background-position: 50%;
+	position: relative;
+	@include r(735) {
+		height: 438px;
+	}
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		top: 0;
+		right: 0;
+		left: 0;
+		z-index: 1;
+		background-image: url(../img/pattern/gradient-blue.png);
+		background-repeat: repeat-x;
+		background-position: 100% 0;
+	}
+	.head {
+		max-width: 700px;
+		position: absolute;
+		z-index: 2;
+		left: 50%;
+		top: 50%;
+		text-align: center;
+		transform: translate(-50%, -50%);
+		width: 100%;
+		@include r(735) {
+			max-width: 290px;
+		}
+		.head__top {
+			font-family: $GeorgiaItalic;
+			@include x-rem(font-size, 40px);
+			color: $white;
+			@include r(735) {
+				font-size: 30px;
+			}
+		}
+		.head__middle {
+			font-family: $Nautilus;
+			@include x-rem(font-size, 100px);
+			color: $white;
+			border-bottom: 1px solid;
+			padding: 0 0 15px 0;
+			margin: 0 0 30px 0;
+			@include r(735) {
+				font-size: 40px;
+			}
+		}
+		.head__descr {
+			font-family: $GeorgiaItalic;
+			@include x-rem(font-size, 22px);
+			color: $white;
+			line-height: 1.4;
+			@include r(735) {
+				font-size: 16px;
+				line-height: 1.9;
 			}
 		}
 	}
