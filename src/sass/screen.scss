@@ -1,4 +1,5 @@
 @import "../../bower_components/normalize.css/normalize.css";
+@import "../../bower_components/slick-carousel/slick/slick.scss";
 @import "lib/base";
 body, html {
 	width: 100%;
@@ -49,10 +50,13 @@ button {
 a {
 	text-decoration: none;
 }
+p {
+	margin: 0;
+}
 .l {
 	max-width: 1200px;
 	margin: 0 auto;
-	padding: 0 15px;
+	// padding: 0 15px;
 	position: relative;
 	@include clearfix;
 	@include r(1200) {
@@ -60,7 +64,7 @@ a {
 	}
 	@include r(980) {
 		max-width: 736px;
-		padding: 0 10px;
+		// padding: 0 10px;
 	}
 	// @include r(735) {
 	// 	max-width: 540px;
@@ -84,6 +88,12 @@ a {
 	}
 }
 .header {
+	.l {
+		padding: 0 15px;
+		@include r(980) {
+			padding: 0 10px;
+		}
+	}
 	.header-top {
 		@include x-rem(height, 39px);
 		background-image: url(../img/pattern/pattern-orna-blue.png);
@@ -138,7 +148,7 @@ a {
 	}
 	.header-row {
 		background-color: $white;
-		@include x-rem(padding, 23px 0 32px 0);
+		@include x-rem(padding, 23px 0 25px 0);
 		.logo {
 			@include x-rem(width, 138px);
 			@include x-rem(height, 43px)
@@ -175,6 +185,12 @@ a {
 }
 .footer {
 	box-shadow: 0px -1px 22px 0px rgba(0, 0, 0, 0.15);
+	.l {
+		padding: 0 15px;
+		@include r(980) {
+			padding: 0 10px;
+		}
+	}
 	.footer-top {
 		background-color: $Lgrey;
 		// @include x-rem(height, 70px);
@@ -487,6 +503,22 @@ a {
 			@include x-rem(padding, 12px 0);
 		}
 	}
+	&.arrow {
+		position: relative;
+		width: 70px;
+		margin-top: 30px;
+		&::after {
+			content: '';
+			width: 11px;
+			height: 10px;
+			background-image: url(../img/icons/btn-arrow.png);
+			background-repeat: no-repeat;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%,-50%);
+		}
+	}
 }
 .header-nav {
 	@include x-rem(padding, 6px 0);
@@ -750,5 +782,374 @@ a {
 				line-height: 1.9;
 			}
 		}
+	}
+}
+.container {
+	box-shadow: inset 0px -1px 10px 0px rgba(0, 0, 0, 0.15);
+	padding: 120px 0;
+	@include r(735) {
+		padding: 40px 0;
+	}
+	&.container-image {
+		box-shadow: none;
+		&.container-tickets {
+			background-image: url(../img/section-1.jpg);
+			background-size: cover;
+			background-position: 50%;
+		}
+	}
+}
+.row {
+	@include clearfix;
+}
+.col-33 {
+	float: left;
+	width: 33.33%;
+	padding: 0 15px;
+	@include clearfix;
+	@include r(980) {
+		padding: 0 10px;
+		width: 100%;
+		&:not(:last-of-type) {
+			margin-bottom: 30px;
+		}
+	}
+}
+.col-66 {
+	float: left;
+	width: 66.66%;
+	padding: 0 15px;
+	@include clearfix;
+	@include r(980) {
+		padding: 0 10px;
+		width: 100%;
+		&:not(:last-of-type) {
+			margin-bottom: 30px;
+		}
+	}
+}
+.col-100 {
+	width: 100%;
+	padding: 0 15px;
+	@include r(980) {
+		padding: 0 10px;
+	}
+}
+.h1, h1	{
+	font-family: $GeorgiaItalic;
+	font-size: 45px;
+	color: $h;
+	position: relative;
+	padding-bottom: 30px;
+	line-height: 50px;
+	margin-bottom: 40px;
+	@include r(735) {
+		font-size: 32px;
+		padding-bottom: 15px;
+		line-height: 32px;
+	}
+	&::after {
+		content: '';
+		bottom: 0;
+		height: 1px;
+		width: 70px;
+		background-color: $h;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+	}
+}
+.h2, h2	{
+	font-family: $GeorgiaItalic;
+	font-size: 40px;
+	color: $h;
+	position: relative;
+	padding-bottom: 30px;
+	line-height: 50px;
+	margin-bottom: 30px;
+	&::after {
+		content: '';
+		bottom: 0;
+		height: 1px;
+		width: 70px;
+		background-color: $h;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+	}
+}
+.h3, h3	{
+	font-family: $GeorgiaItalic;
+	font-size: 35px;
+	color: $h;
+	position: relative;
+	padding-bottom: 25px;
+	line-height: 45px;
+	margin-bottom: 30px;
+	&::after {
+		content: '';
+		bottom: 0;
+		height: 1px;
+		width: 70px;
+		background-color: $h;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+	}
+}
+.h4, h4	{
+	font-family: $GeorgiaItalic;
+	font-size: 30px;
+	color: $h;
+	position: relative;
+	padding-bottom: 20px;
+	line-height: 40px;
+	margin-bottom: 30px;
+	&::after {
+		content: '';
+		bottom: 0;
+		height: 1px;
+		width: 70px;
+		background-color: $h;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+	}
+}
+.h5, h5	{
+	font-family: $GeorgiaItalic;
+	font-size: 25px;
+	color: $h;
+	position: relative;
+	padding-bottom: 20px;
+	line-height: 35px;
+	margin-bottom: 30px;
+	&::after {
+		content: '';
+		bottom: 0;
+		height: 1px;
+		width: 70px;
+		background-color: $h;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+	}
+}
+.h6, h6	{
+	font-family: $GeorgiaItalic;
+	font-size: 22px;
+	color: $h;
+	position: relative;
+	padding-bottom: 20px;
+	line-height: 30px;
+	margin-bottom: 30px;
+	&::after {
+		content: '';
+		bottom: 0;
+		height: 1px;
+		width: 70px;
+		background-color: $h;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+	}
+}
+p {
+	font-family: $RLight;
+	font-size: 15px;
+	line-height: 30px;
+	&:not(:last-of-type) {
+		margin-bottom: 60px;
+	}
+	padding-right: 50px;
+	@include r(735) {
+		padding-right: 0;
+		font-size: 14px;
+		&:not(:last-of-type) {
+			margin-bottom: 20px;
+		}
+	}
+}
+.tickets {
+	padding: 79px 0 5px;
+	margin: 0 -15px;
+	@include clearfix;
+	@include r(639) {
+		max-width: 300px;
+		margin: 0 auto
+	}
+	.tickets-item {
+		padding: 0 15px;
+		height: 656px;
+		width: 33.33%;
+		float: left;
+		@include r(980) {
+			width: 50%;
+		}
+		@include r(735) {
+			height: 556px;
+		}
+		@include r(639) {
+			width: 100%;
+		}
+		.tickets-inner {
+			background-color: rgba(36,36,36,.7);
+			width: 100%;
+			height: 100%;
+			border-radius: 3px;
+			padding-top: 40px;
+			text-align: center;
+			@include r(735) {
+				padding-top: 35px;
+			}
+		}
+		.title {
+			font-family: $GeorgiaItalic;
+			font-size: 22px;
+			color: $white;
+			margin-bottom: 31px;
+			@include r(735) {
+				font-size: 17px;
+				margin-bottom: 30px;
+			}
+		}
+	}
+}
+.case-img {
+	display: inline-block;
+	margin-bottom: 34px;
+	@include r(735) {
+		margin-bottom: 25px;
+		width: 70px;
+		height: 70px;
+	}
+	img {
+		max-width: 100%;
+		max-height: 100%;
+	}
+}
+.option {
+	max-width: 230px;
+	display: inline-block;
+	.option-item {
+		width: 100%;
+		display: inline-block;
+		border-bottom: 1px solid $yellow;
+		margin-bottom: 34px;
+		&:nth-of-type(4) {
+			border-color: transparent;
+		}
+		&.last-child {
+			margin-bottom: 0;
+		}
+		@include r(735) {
+			margin-bottom: 25px;
+		}
+		.option-head {
+			font-family: $RLight;
+			font-size: 14.06px;
+			color: $yellow;
+			padding-bottom: 11px;
+		}
+		.option-body {
+			font-family: $RLight;
+			font-size: 15.9px;
+			color: $white;
+			padding-bottom: 16px;
+			.price {
+				font-size: 30px;
+			}
+		}
+		.btn {
+			max-width: 200px;
+			width: 100%;
+		}
+	}
+	&.option-big {
+		padding-top: 30px;
+		.option-item {
+			.option-body {
+				padding-bottom: 10px;
+			}
+		}
+	}
+	&.option-order {
+		.option-item {
+			&:nth-of-type(3) {
+				border-color: transparent;
+			}
+		}
+	}
+}
+.link {
+	color: $white;
+	font-family: $RLight;
+	border-bottom: 1px solid;
+	transition: color 0.3s ease, border-color 0.3s ease;
+	&:hover {
+		color: $yellow;
+		border-color: $yellow;
+	}
+}
+.slick-dots {
+	position: absolute;
+	left: 0;
+	right: 0;
+	text-align: center;
+	bottom: 20px;
+	@include r(980) {
+		bottom: 0;
+	}
+	li {
+		display: inline-block;
+		width: 10px;
+		height: 10px;
+		text-indent: -9999px;
+		border: 1px solid $white;
+		border-radius: 100%;
+		margin: 0 5px;
+		cursor: pointer;
+		&.slick-active {
+			background-color: $white;
+		}
+	}
+}
+.slick-arrow {
+	width: 50px;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	z-index: 2;
+	text-indent: -9999px;
+	&.slick-prev {
+		left: 0;
+		background-image: url(../img/icons/left.png);
+		background-position: 50%;
+		background-repeat: no-repeat;
+	}
+	&.slick-next {
+		right: 0;
+		background-image: url(../img/icons/right.png);
+		background-position: 50%;
+		background-repeat: no-repeat;
+	}
+}
+.tickets {
+	.slick-dots {
+		bottom: -75px;
+		@include r(735) {
+			bottom: -30px;
+		}
+		li {
+			border-color: $Dyellow;
+			&.slick-active {
+				background-color: $Dyellow;
+			}
+		}
+	}
+}
+.slider-carousel {
+	img {
+		width: 100%;
 	}
 }
