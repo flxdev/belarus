@@ -54,4 +54,94 @@ $(document).ready(function () {
 		// 	$(this).slick('slickPlay')
 		// });
 	} slicks();
+
+
+	function selects() {
+		$('.select').fancySelect({
+			optionTemplate: function(optionEl) {
+			    return '<span>' + optionEl.text() + '</span>';
+			}
+		});
+	} selects();
+
+	//form validetor
+	function validator() {
+			var form_validate = $('.validation');
+		if (form_validate.length) {
+			form_validate.each(function () {
+				var form_this = $(this);
+				$.validate({
+					form : form_this,
+					borderColorOnError : true,
+					scrollToTopOnError : false,
+					validateOnBlur : true,
+					onValidate: function($form) {
+						$form.removeClass('error');
+					},
+					onError: function($form) {
+						$form.addClass('error');
+					},
+					onSuccess: function($form){
+						valid($form);
+						return false;
+					}
+				});
+			});
+		};
+	} validator();
+
+	function valid(form) {
+		$(form).parents('.popup__wrap').find('.front').removeClass("active");
+		$(form).parents('.popup__wrap').find('.back').addClass("active");			
+	}
+
+	//popup
+	
+	$('[data-popup]').each(function() {
+		var _ = $(this);
+
+		_.on('click', function(e) {
+			popup($(this).data('popup'));
+			e.preventDefault();
+		});
+	});
+
+
+	function popup(selector) {
+		var popupSelector = $('.' + selector),
+			innerSelector = popupSelector.find('.popup'),
+			duration = 500,
+			close = popupSelector.find('.close'),
+			btnSuccess = popupSelector.find('.btn__success'),
+			html = $('html');
+
+		popupSelector
+			.fadeIn({
+				duration: duration,
+				start: function(){
+					html.addClass('hidden');
+				},
+				complete: function(){
+					$(this).addClass('visible');
+				}
+			});
+
+		innerSelector.on('click', function(event){
+			event.stopPropagation();
+		});
+
+		close.add(popupSelector).add(btnSuccess).on('click', function(){
+			if(!popupSelector.hasClass('visible')) return;
+
+			popupSelector
+				.fadeOut({
+					duration: duration,
+					complete: function(){
+						$(this).removeClass('visible');
+						html.removeClass('hidden');
+					}
+				});
+		});
+	};
+
 })
