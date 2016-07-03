@@ -128,6 +128,7 @@ p {
 			@include x-rem(padding, 6px 0 12px);
 			position: relative;
 			text-align: center;
+			border-bottom: none;
 			@include r(400) {
 				width: 50%;
 			}
@@ -1002,6 +1003,13 @@ p {
 			@include r(735) {
 				padding-top: 35px;
 			}
+			.case-img {
+				@include r(735) {
+					margin-bottom: 25px;
+					width: 70px;
+					height: 70px;
+				}
+			}
 		}
 		.title {
 			font-family: $GeorgiaItalic;
@@ -1018,11 +1026,6 @@ p {
 .case-img {
 	display: inline-block;
 	margin-bottom: 34px;
-	@include r(735) {
-		margin-bottom: 25px;
-		width: 70px;
-		height: 70px;
-	}
 	img {
 		max-width: 100%;
 		max-height: 100%;
@@ -1151,5 +1154,288 @@ p {
 .slider-carousel {
 	img {
 		width: 100%;
+	}
+}
+.container-apps {
+	background-image: url(../img/download.png);
+	background-position: 50%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	text-align: center;
+	padding: 80px 0 49px;
+	.mobile {
+		position: relative;
+		top: 10px;
+		left: -4px;
+		img {
+			max-width: 100%;
+		}
+	}
+	.col-33 {
+		@include r(980) {
+			display: none;
+		}
+	}
+}
+.apps {
+	.apps-top {
+		font-family: $GeorgiaItalic;
+		font-size: 35.03px;
+		color: $white;
+		margin-bottom: 14px;
+		@include r(980) {
+			font-size: 27.02px;
+		}
+		@include r(735) {
+			margin-bottom: 16px;
+		}
+	}
+	.apps-head {
+		font-family: $GeorgiaItalic;
+		font-size: 40.03px;
+		line-height: 48px;
+		color: $white;
+		display: inline-block;
+		max-width: 85%;
+		margin-bottom: 30px;
+		@include r(980) {
+			font-size: 30.02px;
+		}
+		@include r(735) {
+			max-width: 100%;
+			line-height: 40px;
+		}
+	}
+	p {
+		font-family: $RLight;
+		font-size: 17px;
+		color: $white;
+		padding: 0;
+		line-height: 35px;
+		@include r(980) {
+			font-size: 15.01px;
+		}
+	}
+	.apps-load {
+		font-size: 0;
+		margin: 40px 0;
+		@include r(735) {
+			margin: 40px -10px 12px;
+		}
+		.apps-load_item {
+			display: inline-block;
+			margin: 0 17px;
+			width: 155px;
+			height: 50px;
+			position: relative;
+			@include r(735) {
+				margin: 0 10px;
+				height: 45px;
+				width: 140px;
+			}
+			&::after {
+				content: '';
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				opacity: 0;
+				visibility: hidden;
+				//transition: opacity 0.15s ease, visibility 0.15s ease;
+				left: 0;
+				top: 0;
+			}
+			&::before {
+				content: '';
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				opacity: 1;
+				visibility: visible;
+				//transition: opacity 0.15s ease, visibility 0.15s ease;
+				left: 0;
+				top: 0;
+			}
+			&.g-play {
+				&::after {
+					background-image: url(../img/download/g-play-hover.png);
+					background-size: cover;
+				}
+				&::before {
+					background-image: url(../img/download/g-play.png);
+					background-size: cover;
+				}
+			}
+			&.a-store {
+				&::after {
+					background-image: url(../img/download/a-store-hover.png);
+					background-size: cover;
+				}
+				&::before {
+					background-image: url(../img/download/a-store.png);
+					background-size: cover;
+				}
+			}
+			&:hover {
+				&.g-play {
+					&::after {
+						opacity: 1;
+						visibility: visible;
+					}
+					&::before {
+						opacity: 0;
+						visibility: hidden;
+					}
+				}
+				&.a-store {
+					&::after {
+						opacity: 1;
+						visibility: visible;
+					}
+					&::before {
+						opacity: 0;
+						visibility: hidden;
+					}
+				}
+			}
+		}
+	}
+}
+.container-news {
+	padding: 131px 0;
+	box-shadow: none;
+	.col-33 {
+		padding-top: 26px;
+	}
+	@include r(735) {
+		padding: 33px 0 62px;
+	}
+}
+.conteiner-preview {
+	margin: 0 -15px;
+	@include r(735) {
+		margin: 0 -10px;
+	}
+	.event-item {
+		width: 50%;
+		@include r(480) {
+			max-width: 370px;
+			width: 100%;
+		}
+	}
+}
+.event-item {
+	width: 33.33%;
+	padding: 0 15px;
+	height: 623px;
+	position: relative;
+	float: left;
+	&::after {
+		content: '';
+		border-bottom: 1px solid $blue;
+		bottom: 0;
+		left: 20px;
+		right: 115px;
+		position: absolute;
+		@include r(480) {
+			left: 10px;
+			right: 93px;
+		}
+	}
+	@include r(480) {
+		padding: 0 10px;
+		height: 552px;
+		&:not(:last-of-type) {
+			margin-bottom: 60px;
+		}
+	}
+	.case-img {
+		margin-bottom: 22px;
+		display: block;
+		img {
+			display: block;
+		}
+	}
+	.event-inner {
+		padding: 0 20px;
+		@include r(480) {
+			padding-right: 0;
+		}
+	}
+	.head {
+		font-family: $GeorgiaItalic;
+		font-size: 22.02px;
+		color: $Mgrey;
+		display: inline-block;
+		line-height: 30px;
+		margin-bottom: 17px;
+		@include r(480) {
+			font-size: 17.01px
+		}
+	}
+	data {
+		font-family: $R;
+		font-size: 13px;
+		color: $blue;
+		display: inline-block;
+		margin-bottom: 16px;
+	}
+	p {
+		font-family: $RLight;
+		font-size: 14px;
+		color: #3a3a3a;
+		padding: 0;
+	}
+	.btn {
+		position: absolute;
+		bottom: 0;
+		right: 13px;
+	}
+}
+.partners-rotator {
+	position: relative;
+	@include r(735) {
+		margin-bottom: 20px;
+	}
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		width: 50px;
+		right: 0;
+		height: 100%;
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0+1,1+100 */
+		background: -moz-linear-gradient(left,  rgba(255,255,255,0) 0%, rgba(255,255,255,0) 1%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,0) 1%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to right,  rgba(255,255,255,0) 0%,rgba(255,255,255,0) 1%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+		z-index: 1;
+	}
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		width: 50px;
+		left: 0;
+		height: 100%;
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&1+0,0+100 */
+		background: -moz-linear-gradient(left,  rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 */
+		z-index: 1;
+	}
+	.partners-item {
+		height: 60px;
+		display: inline-block;
+		vertical-align: middle;
+		margin: 0 25px;
+		filter: grayscale(100%);
+		transition: filter 0.3s ease;
+		&:hover {
+			filter: grayscale(0);
+		}
+		img {
+			max-width: 100%;
+		}
 	}
 }

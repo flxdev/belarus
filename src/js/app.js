@@ -35,6 +35,23 @@ $(document).ready(function () {
 					}
 				}
 			]
-		})
+		});
+		$('.partners-rotator').slick({
+			slidesToShow: 8,
+			slidesToScroll: 1,
+			variableWidth: true,
+			arrows: false,
+			infinite: true,
+			autoplay: true,
+			autoplaySpeed: !0,
+			speed: 6000,
+			cssEase: 'linear'
+		});
+		// $('.partners-rotator').on('mouseenter', function(){
+		// 	$(this).slick('slickPause')
+		// });
+		// $('.partners-rotator').on('mouseleave', function(){
+		// 	$(this).slick('slickPlay')
+		// });
 	} slicks();
 })
