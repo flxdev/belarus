@@ -886,7 +886,7 @@ p {
 		content: '';
 		bottom: 0;
 		height: 1px;
-		width: 70px;
+		width: 170px;
 		background-color: $h;
 		position: absolute;
 		bottom: 0;
@@ -905,7 +905,7 @@ p {
 		content: '';
 		bottom: 0;
 		height: 1px;
-		width: 70px;
+		width: 170px;
 		background-color: $h;
 		position: absolute;
 		bottom: 0;
@@ -924,7 +924,7 @@ p {
 		content: '';
 		bottom: 0;
 		height: 1px;
-		width: 70px;
+		width: 170px;
 		background-color: $h;
 		position: absolute;
 		bottom: 0;
@@ -943,7 +943,7 @@ p {
 		content: '';
 		bottom: 0;
 		height: 1px;
-		width: 70px;
+		width: 170px;
 		background-color: $h;
 		position: absolute;
 		bottom: 0;
@@ -962,7 +962,7 @@ p {
 		content: '';
 		bottom: 0;
 		height: 1px;
-		width: 70px;
+		width: 170px;
 		background-color: $h;
 		position: absolute;
 		bottom: 0;
@@ -1793,7 +1793,7 @@ p {
 	.h1 {
 		padding-bottom: 11px;
 	}
-	p {
+	.lead {
 		padding: 17px 0 17px 0;
 		font-size: 17px;
 		line-height: 35px;
@@ -2009,6 +2009,73 @@ p {
 			max-width: 100%;
 			position: relative;
 			top: -17px;
+		}
+	}
+}
+.conteiner-expo {
+	position: relative;
+	z-index: 4;
+	padding: 46px 0;
+	.h6 {
+		padding-bottom: 13px;
+		margin-bottom: 0;
+	}
+}
+.filter-item {
+	.filter-head {
+		font-family: $RLight;
+		font-size: 17px;
+		color: $Mgrey;
+		display: inline-block;
+		width: 100%;
+		border-bottom: 1px solid $grey;
+		padding-bottom: 4px;
+		margin-bottom: 19px;
+	}
+	.filter-body {
+		font-size: 0;
+		margin-bottom: -20px;
+	}
+	.filter-field {
+		&:nth-of-type(even) {
+			margin-left: 13.5%;
+		}
+		margin-bottom: 20px;
+	}
+}
+.check-field {
+	position: relative;
+	display: inline-block;
+	width: 40.5%;
+	input {
+		position: absolute;top: 0;left: 0;
+		opacity: 0;
+		visibility: hidden;
+		&:checked {
+			& + label {
+				background-color: $Dyellow;
+				border-color: $Dyellow;
+			}
+		}
+	}
+	label {
+		border: 1px solid $grey;
+		border-radius: 3px;
+		display: inline-block;
+		padding: 10px 0;
+		cursor: pointer;
+		transition: border 0.3s ease, background 0.3s ease;
+		width: 100%;
+		text-align: center;
+		user-select: none;
+		&:hover {
+			border-color: $Dyellow;
+		}
+		span {
+			font-family: $RLight;
+			font-size: 15px;
+			color: #333333;
+			display: block;
 		}
 	}
 }
