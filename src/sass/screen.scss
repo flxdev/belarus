@@ -91,6 +91,9 @@ p {
 	}
 }
 .header {
+	box-shadow: 0px 1px 10px 0px rgba(0,0,0,.15);
+	position: relative;
+	z-index: 5;
 	.l {
 		padding: 0 15px;
 		@include r(980) {
@@ -295,6 +298,7 @@ p {
 			@include x-rem(line-height, 25px);
 			letter-spacing: -0.17px;
 			@include x-rem(margin-bottom, 18px);
+			padding-right: 0;
 		}
 		input {
 			@include x-rem(height, 50px);
@@ -789,13 +793,15 @@ p {
 	}
 }
 .container {
-	box-shadow: inset 0px -1px 10px 0px rgba(0, 0, 0, 0.15);
+	box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.15);
 	padding: 120px 0;
 	@include r(735) {
 		padding: 40px 0;
 	}
 	&.container-image {
-		box-shadow: none;
+		box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.15);
+		position: relative;
+		z-index: 2;
 		&.container-tickets {
 			background-image: url(../img/section-1.jpg);
 			background-size: cover;
@@ -839,6 +845,11 @@ p {
 		padding: 0 10px;
 	}
 }
+.row {
+	&:not(:last-of-type) {
+		margin-bottom: 35px;
+	}
+}
 .h1, h1	{
 	font-family: $GeorgiaItalic;
 	font-size: 45px;
@@ -856,8 +867,8 @@ p {
 		content: '';
 		bottom: 0;
 		height: 1px;
-		width: 70px;
-		background-color: $h;
+		width: 170px;
+		background-color: $grey;
 		position: absolute;
 		bottom: 0;
 		left: 0;
@@ -1303,9 +1314,11 @@ p {
 		}
 	}
 }
+.container-partners {
+	box-shadow: none;
+}
 .container-news {
 	padding: 131px 0;
-	box-shadow: none;
 	.col-33 {
 		padding-top: 26px;
 	}
@@ -1703,4 +1716,299 @@ p {
 }
 .help-block {
 	display: none!important;
+}
+.container-breadcrumbs {
+	padding: 28px 0 25px;
+	position: relative;
+	z-index: 2;
+	background-color: $white;
+}
+.breadcrumbs {
+	font-size: 0;
+	padding: 0 15px;
+	margin-bottom: 15px;
+	@include r(735) {
+		padding: 0 10px;
+	}
+	.breadcrumbs-item {
+		display: inline-block;
+		vertical-align: middle;
+		font-family: $RLight;
+		font-size: 12px;
+		color: $blue;
+		height: 30px;
+		line-height: 26px;
+		border-top: 1px solid $grey;
+		border-bottom: 1px solid $grey;
+		padding: 0 0 0 13px;
+		position: relative;
+		margin-right: 25px;
+		margin-bottom: 10px;
+		&.active {
+			font-family: $RLightI;
+			padding-right: 2px;
+		}
+		&:first-of-type {
+			border-left: 1px solid $grey;
+			border-radius: 3px;
+			&::after {
+				display: none;
+			}
+		}
+		&::before {
+			content: '';
+			position: absolute;
+			background-image: url(../img/icons/breadcrumbs-right.png);
+			width: 25px;
+			height: 30px;
+			top: -1px;
+			right: -23px;
+			background-position: 100% 0;
+		}
+		&::after {
+			content: '';
+			position: absolute;
+			top: -1px;
+			left: -10px;
+			background-image: url(../img/icons/breadcrumbs-left.png);
+			width: 25px;
+			height: 30px;
+		}
+		.icon {
+			display: inline-block;
+			vertical-align: middle;
+			width: 14px;
+			height: 16px;
+			background-image: url(../img/icons/home.png);
+			position: relative;
+			top: -2px;
+			margin-right: 6px;
+		}
+	}
+}
+.head {
+	margin: 0 0 62px;
+	display: inline-block;
+	width: 100%;
+	.h1 {
+		padding-bottom: 11px;
+	}
+	p {
+		padding: 17px 0 17px 0;
+		font-size: 17px;
+		line-height: 35px;
+	}
+}
+.container-rotator {
+	.h1 {
+		padding-top: 40px;
+	}
+	p {
+		&:not(:last-of-type) {
+			margin-bottom: 35px;
+		}
+	}
+}
+.container-grey {
+	background-color: $Lgrey;
+	box-shadow: none;
+}
+.p-right {
+	.col-33 {
+		float: right;
+		@include r(735) {
+			float: none;
+		}
+	}
+}
+.container-ceo {
+	padding: 57px 0 0;
+	text-align: center;
+	background-image: url(../img/bg-CEO-speech.jpg);
+	background-size: cover;
+	background-position: 50%;
+	.ceo-person {
+		max-width: 570px;
+		display: inline-block;
+		margin-top: 48px;
+		@include r(735) {
+			margin-top: 0;
+		}
+	}
+	.ceo-head {
+		margin-bottom: 25px;
+		span {
+			font-family: $RLight;
+			font-size: 14.01px;
+			color: $blue;
+			display: inline-block;
+			width: 100%;
+		}
+		.name {
+			font-family: $GeorgiaItalic;
+			font-size: 25.01px;
+		}
+	}
+	.ceo-networks {
+		font-size: 0;
+		margin-bottom: 25px;
+		.networks-item {
+			display: inline-block;
+			width: 43px;
+			height: 43px;
+			&:not(:first-of-type) {
+				margin-left: 15px;
+			}
+			position: relative;
+			&::after {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				transition: opacity 0.3s ease;
+				background-size: cover;
+				width: 100%;
+				height: 100%;
+			}
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				transition: opacity 0.3s ease;
+				background-size: cover;
+				width: 100%;
+				height: 100%;
+				opacity: 0;
+			}
+			&.networks-fb {
+				&::after {
+					background-image: url(../img/icons/icon-fb.png);
+					background-size: contain;
+				}
+				&::before {
+					background-image: url(../img/icons/icon-fb-hover.png);
+					background-size: contain;
+				}
+			}
+			&.networks-vk {
+				&::after {
+					background-image: url(../img/icons/icon-vk.png);
+					background-size: contain;
+				}
+				&::before {
+					background-image: url(../img/icons/icon-vk-hover.png);
+					background-size: contain;
+				}
+			}
+			&:hover {
+				&::after {
+					opacity: 0;
+				}
+				&::before {
+					opacity: 1;
+				}
+			}
+		}
+	}
+	p {
+		font-family: $RLight;
+		font-size: 17.01px;
+		line-height: 35px;
+		color: $Mgrey;
+		padding-right: 0;
+		@include r(980) {
+			font-size: 16px;
+		}
+	}
+	@include r(980) {
+		background-position: 0 0;
+		padding: 57px 0 57px;
+		.col-33 {
+			display: none;
+		}
+	}
+	@include r(735) {
+		padding: 40px 0;
+	}
+}
+.ceo-person_img {
+	width: 100%;
+	img {
+		max-width: 100%;
+		position: relative;
+		top: 4px;
+	}
+}
+.container-banner {
+	padding: 96px 0 59px;
+	text-align: center;
+	background-image: url(../img/bg-Library.jpg);
+	background-size: cover;
+	background-position: 50%;
+	@include r(980) {
+		.col-33 {
+			display: none;
+		}
+	}
+	@include r(735) {
+		padding: 40px 0;
+	}
+	.banner-content {
+		.banner-top {
+			font-family: $GeorgiaItalic;
+			font-size: 35.03px;
+			color: $white;
+			margin-bottom: 12px;
+			@include r(980) {
+				font-size: 27.02px;
+			}
+		}
+		.banner-title {
+			font-family: $GeorgiaItalic;
+			font-size: 40.03px;
+			color: $white;
+			letter-spacing: 0.35px;
+			line-height: 50px;
+			margin-bottom: 26px;
+			@include r(980) {
+				font-size: 30.02px;
+			}
+		}
+		p {
+			padding-right: 0;
+			font-size: 17.01px;
+			line-height: 35px;
+			color: $white;
+			max-width: 566px;
+			display: inline-block;
+			@include r(980) {
+				font-size: 16px;
+			}
+		}
+		.banner-navigation {
+			margin: 25px 0;
+			font-size: 0;
+			@include r(735) {
+				margin-bottom: 0;
+			}
+		}
+		.btn {
+			width: 210px;
+			margin: 0 15px;
+			@include r(499) {
+				&:first-of-type {
+					margin-bottom: 20px;
+				}
+			}
+		}
+	}
+	.banner-img {
+		width: 100%;
+		img {
+			max-width: 100%;
+			position: relative;
+			top: -17px;
+		}
+	}
 }
