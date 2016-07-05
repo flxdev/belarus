@@ -1326,16 +1326,32 @@ p {
 		padding: 33px 0 62px;
 	}
 }
-.conteiner-preview {
-	margin: 0 -15px;
+.container-preview {
+	@include clearfix;
+	margin: 0 -15px -80px;
 	@include r(735) {
 		margin: 0 -10px;
 	}
 	.event-item {
 		width: 50%;
+		margin-bottom: 0;
 		@include r(480) {
 			max-width: 370px;
 			width: 100%;
+		}
+	}
+}
+.conteiner-expo {
+	@include clearfix;
+	display: inline-block;
+	margin-bottom: -40px;
+	@include r(980) {
+		margin-bottom: -20px;
+	}
+	& + .load-more {
+		margin-bottom: -40px;
+		@include r(980)  {
+			margin-bottom: 0;
 		}
 	}
 }
@@ -1345,6 +1361,7 @@ p {
 	height: 623px;
 	position: relative;
 	float: left;
+	margin-bottom: 80px;
 	&::after {
 		content: '';
 		border-bottom: 1px solid $blue;
@@ -1357,9 +1374,16 @@ p {
 			right: 93px;
 		}
 	}
+	@include r(980) {
+		padding: 0 10px;
+		width: 50%;
+		margin-bottom: 60px;
+	}
 	@include r(480) {
 		padding: 0 10px;
 		height: 552px;
+		max-width: 370px;
+		width: 100%;
 		&:not(:last-of-type) {
 			margin-bottom: 60px;
 		}
@@ -1367,8 +1391,154 @@ p {
 	.case-img {
 		margin-bottom: 22px;
 		display: block;
+		position: relative;
 		img {
 			display: block;
+		}
+		&:hover {
+			& .event-gallery {
+				display: block;
+				opacity: 1;
+			}
+		}
+	}
+	.event-gallery {
+		position: absolute;
+		min-height: 100%;
+		top: 0;
+		left: 0;
+		right: 0;
+		transition: opacity 0.3s ease;
+		z-index: 3;
+		opacity: 0;
+		display: none;
+		.brazzers-gallery {
+			position: absolute;
+			top: 0;
+			width: 100%;
+			left: 0;
+			right: 0;
+			height: auto;
+			bottom: 0;
+			font-size: 0;
+			.brazzers-gallery__page {
+				display: inline-block;
+				position: static;
+				height: 100%;
+				&.brazzers-gallery__page_column_5 {
+					width: 20%;
+					.brazzers-gallery__button {
+						width: 20%;
+					}
+				}
+				&.brazzers-gallery__page_column_4 {
+					width: 25%;
+					.brazzers-gallery__button {
+						width: 25%;
+					}
+				}
+				&.brazzers-gallery__page_column_3 {
+					width: 33.33%;
+					.brazzers-gallery__button {
+						width: 33.33%;
+					}
+				}
+				&.brazzers-gallery__page_column_2 {
+					width: 50%;
+					.brazzers-gallery__button {
+						width: 50%;
+					}
+				}
+				&.brazzers-gallery__page_column_1 {
+					width: 100%;
+					.brazzers-gallery__button {
+						width: 100%;
+					}
+				}
+				&:hover {
+					.brazzers-gallery__image-wrapper {
+						opacity: 1;
+						z-index: -1;
+					}
+					.brazzers-gallery__button {
+						&::after {
+							background-color: $blue;
+						}
+					}
+				}
+			}
+			.brazzers-gallery__image-wrapper {
+				overflow: hidden;
+				opacity: 0;
+				z-index: -2;
+				bottom: 0;
+				top: 0;
+				right: 0;
+				position: absolute;
+				height: auto;left: 0;
+				width: 100%;
+				img {
+					position: absolute;
+					width: 100%;
+					height: auto;
+					left: 0;
+					max-width: none;
+				}
+			}
+			.brazzers-gallery__button {
+				background-color: $white;
+				bottom: -7px;
+				min-height: 7px;
+				position: absolute;
+				z-index: 4;
+				&::after {
+					content: '';
+					bottom: 2px;
+					height: 3px;
+					left: 1px;
+					right: 1px;
+					top: 2px;
+					position: absolute;
+					transition: background-color 0.2s ease 0s;
+					background-color: $grey;
+				}
+			}
+			.brazzers-gallery__more {
+				background-color: rgba(29,80,135,.6);
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				left: 0;
+				top: 0;
+				color: $white;
+				.brazzers-gallery__more-wrapper {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%,-50%);
+					text-align: center;
+					.brazzers-gallery__more-icon {
+						width: 75px;
+						height: 60px;
+						background-image: url(../img/icons/icon-photo.png);
+						background-size: cover;
+						display: inline-block;
+						margin-bottom: 10px;
+						@include r(735) {
+							width: 50px;
+							height: 40px;
+						}
+					}
+					.brazzers-gallery__more-text {
+						font-family: $RLight;
+						font-size: 17.01px;
+						color: white;
+						@include r(735) {
+							font-size: 15px;
+						}
+					}
+				}
+			}
 		}
 	}
 	.event-inner {
@@ -1384,7 +1554,7 @@ p {
 		display: inline-block;
 		line-height: 30px;
 		margin-bottom: 17px;
-		@include r(480) {
+		@include r(540) {
 			font-size: 17.01px
 		}
 	}
@@ -2012,7 +2182,7 @@ p {
 		}
 	}
 }
-.conteiner-expo {
+.conteiner-filter {
 	position: relative;
 	z-index: 4;
 	padding: 46px 0;
@@ -2076,6 +2246,20 @@ p {
 			font-size: 15px;
 			color: #333333;
 			display: block;
+		}
+	}
+}
+.load-more {
+	text-align: center;
+	.btn {
+		width: 200px;
+		.icon {
+			width: 20px;
+			height: 16px;
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 5px;
+			background-image: url(../img/icons/load.png);
 		}
 	}
 }
