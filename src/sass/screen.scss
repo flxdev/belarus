@@ -812,6 +812,19 @@ p {
 .row {
 	@include clearfix;
 }
+.col-25 {
+	float: left;
+	width: 25%;
+	padding: 0 15px;
+	@include clearfix;
+	@include r(980) {
+		padding: 0 10px;
+		width: 100%;
+		&:not(:last-of-type) {
+			margin-bottom: 30px;
+		}
+	}
+}
 .col-33 {
 	float: left;
 	width: 33.33%;
@@ -828,6 +841,19 @@ p {
 .col-66 {
 	float: left;
 	width: 66.66%;
+	padding: 0 15px;
+	@include clearfix;
+	@include r(980) {
+		padding: 0 10px;
+		width: 100%;
+		&:not(:last-of-type) {
+			margin-bottom: 30px;
+		}
+	}
+}
+.col-75 {
+	float: left;
+	width: 75%;
 	padding: 0 15px;
 	@include clearfix;
 	@include r(980) {
@@ -1503,42 +1529,6 @@ p {
 					background-color: $grey;
 				}
 			}
-			.brazzers-gallery__more {
-				background-color: rgba(29,80,135,.6);
-				position: absolute;
-				bottom: 0;
-				right: 0;
-				left: 0;
-				top: 0;
-				color: $white;
-				.brazzers-gallery__more-wrapper {
-					position: absolute;
-					top: 50%;
-					left: 50%;
-					transform: translate(-50%,-50%);
-					text-align: center;
-					.brazzers-gallery__more-icon {
-						width: 75px;
-						height: 60px;
-						background-image: url(../img/icons/icon-photo.png);
-						background-size: cover;
-						display: inline-block;
-						margin-bottom: 10px;
-						@include r(735) {
-							width: 50px;
-							height: 40px;
-						}
-					}
-					.brazzers-gallery__more-text {
-						font-family: $RLight;
-						font-size: 17.01px;
-						color: white;
-						@include r(735) {
-							font-size: 15px;
-						}
-					}
-				}
-			}
 		}
 	}
 	.event-inner {
@@ -1575,6 +1565,43 @@ p {
 		position: absolute;
 		bottom: 0;
 		right: 13px;
+	}
+}
+.brazzers-gallery__more {
+	background-color: rgba(29,80,135,.6);
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	top: 0;
+	color: $white;
+	.brazzers-gallery__more-wrapper {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		text-align: center;
+		width: 100%;
+		.brazzers-gallery__more-icon {
+			width: 75px;
+			height: 60px;
+			background-image: url(../img/icons/icon-photo.png);
+			background-size: cover;
+			display: inline-block;
+			margin-bottom: 10px;
+			@include r(735) {
+				width: 50px;
+				height: 40px;
+			}
+		}
+		.brazzers-gallery__more-text {
+			font-family: $RLight;
+			font-size: 17.01px;
+			color: white;
+			@include r(735) {
+				font-size: 15px;
+			}
+		}
 	}
 }
 .partners-rotator {
@@ -1896,7 +1923,6 @@ p {
 .breadcrumbs {
 	font-size: 0;
 	padding: 0 15px;
-	margin-bottom: 15px;
 	@include r(735) {
 		padding: 0 10px;
 	}
@@ -2262,4 +2288,200 @@ p {
 			background-image: url(../img/icons/load.png);
 		}
 	}
+}
+.container-content {
+	position: relative;
+	z-index: 4;
+	background-color: $white;
+	box-shadow: none;
+	padding: 0;
+}
+.images-lead {
+	@include clearfix;
+	img {
+		max-width: 100%;
+		display: block;
+	}
+}
+.vertical-gallery {
+	margin: 0 -10px;
+	@include r(600) {
+		margin-bottom: 20px;
+	}
+	.item {
+		max-height: 160px;
+		overflow: hidden;
+		position: relative;
+		@include r(1200) {
+			max-height: 127px;
+		}
+		@include r(980) {
+			width: 33.33%;
+			float: left;
+		}
+		@include r(980) {
+			width: 50%;
+			max-height: 100%;
+		}
+		@include r(400) {
+			.brazzers-gallery__more-icon {
+				width: 25px;
+				height: 20px;
+			}
+			.brazzers-gallery__more-text {
+				font-size: 12px;
+			}
+		}
+		display: block;
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+		& > div {
+			margin: 0 10px;
+			position: relative;
+		}
+	}
+	.slick-dots {
+		bottom: -15px;
+		li {
+			border-color: $Dyellow;
+			&.slick-active {
+				background-color: $Dyellow;
+			}
+		}
+	}
+	.brazzers-gallery__more {
+		background-color: rgba(0,0,0,.6);
+		transition: background-color 0.3s ease;
+		&:hover {
+			background-color: rgba(29, 80, 135, 0.6);
+		}
+	}
+}
+.container-chronicle {
+	padding: 25px 0;
+}
+.chronicle {
+	font-size: 0;
+	.chronicle-item {
+		position: relative;
+		.icon {
+			float: left;
+			margin-right: 19px;
+		}
+		.chronicle-head {
+			font-family: $RLight;
+			font-size: 14.06px;
+			color: $blue;
+			padding: 2px 0 12px;
+		}
+		.chronicle-name {
+			font-family: $RLight;
+			font-size: 14.06px;
+			color: $Mgrey;
+			letter-spacing: 0.9px;
+		}
+	}
+	.col-33 {
+		@include r(980) {
+			width: 50%;
+		}
+		@include r(735) {
+			width: 100%;
+		}
+	}
+}
+.container-text {
+	padding: 40px 0;
+	box-shadow: none;
+}
+.container-trip {
+	padding: 80px 0;
+	background-image: url(../img/bg-road-trip.jpg);
+	background-size: cover;
+	background-position: 50%;
+	.h1 {
+		&::after {
+			background-color: $blue;
+		}
+	}
+	p {
+		font-size: 17.01px;
+		line-height: 35px;
+		padding-right: 0;
+		padding-top: 20px;
+	}
+	.location {
+		text-align: center;
+	}
+	.tickets {
+		padding: 0;
+		float: left;
+		margin-right: 0;
+		width: 33.33%;
+		@include r(980) {
+			width: 50%;
+		}
+		@include r(595) {
+			width: 100%;
+			float: none;
+			display: inline-block;
+		}
+		.tickets-inner {
+			padding-top: 56px;
+		}
+		.tickets-item {
+			width: 100%;
+			height: 606px;
+		}
+		.option {
+			max-width: 250px;
+			@include r(639) {
+				max-width: 230px;
+			}
+		}
+		.option-item {
+			border-bottom: 1px solid $Dyellow;
+			&:last-child {
+				border-color: transparent;
+			}
+			p {
+				font-family: $RLight;
+				font-size: 13.06px;
+				color: #aaaaaa;
+				line-height: 17px;
+			}
+			.btn {
+				max-width: 100%;
+			}
+		}
+	}
+	.overlay {
+		width: 66.66%;
+		float: right;
+		@include r(980) {
+			width: 50%;
+			padding: 0 10px;
+		}
+		@include r(595) {
+			
+			float: none;
+			width: 100%;
+			display: inline-block;
+			margin-bottom: 20px;
+			text-align: center;
+			#maps {
+				max-width: 270px;
+				margin: 0 auto;
+			}
+		}
+	}
+	#maps {
+		height: 606px;
+		border-radius: 2px;
+	}
+}
+#maps {
+	width: 100%;
+	height: 100%;
 }

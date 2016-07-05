@@ -55,6 +55,35 @@ $(document).ready(function () {
 		// });
 	} slicks();
 
+	function reSlicks() {
+		$('.vertical-gallery').slick({
+			dots: false,
+			arrows: false,
+			slidesToShow: 3,
+			responsive: [
+				{
+					breakpoint: 600,
+					settings: {
+						slidesToScroll: 2,
+						slidesToShow: 2,
+						dots: true
+					}
+				}
+			]
+		});
+		$('.vertical-gallery').addClass('initial');
+	};
+
+	$(window).on('load resize', function(){
+		if($(window).width() <= 981 && !$('.vertical-gallery').hasClass('initial')) {
+			reSlicks();
+		}
+		if($(window).width() > 981 && $('.vertical-gallery').hasClass('initial')) {
+			$('.vertical-gallery').slick('unslick');
+			$('.vertical-gallery').removeClass('initial');
+		}
+	});
+
 
 	function selects() {
 		$('.select').fancySelect({
@@ -143,5 +172,52 @@ $(document).ready(function () {
 				});
 		});
 	};
+
+
+	function gMaps(id, longitude, latitude) {
+		var map;
+		function initialize() {
+			var stylez = [{"featureType":"all","elementType":"geometry","stylers":[{"weight":"1.00"}]},{"featureType":"landscape","elementType":"all","stylers":[{"hue":"#f1ff00"},{"saturation":-27.4},{"lightness":9.4},{"gamma":"1.97"},{"weight":"1.00"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"visibility":"on"},{"color":"#e5ecf4"}]},{"featureType":"landscape","elementType":"geometry.fill","stylers":[{"visibility":"on"}]},{"featureType":"landscape.man_made","elementType":"geometry","stylers":[{"visibility":"on"},{"color":"#e5ecf4"},{"lightness":"0"},{"gamma":"2.16"}]},{"featureType":"landscape.natural.landcover","elementType":"geometry","stylers":[{"visibility":"on"}]},{"featureType":"landscape.natural.terrain","elementType":"geometry.fill","stylers":[{"visibility":"on"}]},{"featureType":"poi","elementType":"all","stylers":[{"hue":"#9FFF00"},{"gamma":1}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#92cd37"},{"lightness":"0"},{"weight":"9.18"}]},{"featureType":"poi.sports_complex","elementType":"geometry","stylers":[{"visibility":"on"}]},{"featureType":"poi.sports_complex","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#f2f0ec"},{"lightness":"-5"},{"gamma":"1.11"}]},{"featureType":"road.highway","elementType":"all","stylers":[{"hue":"#0099FF"},{"saturation":-20},{"lightness":36.4},{"gamma":1}]},{"featureType":"road.arterial","elementType":"all","stylers":[{"hue":"#00FF4F"},{"gamma":1}]},{"featureType":"road.local","elementType":"all","stylers":[{"hue":"#FFB300"},{"saturation":-38},{"lightness":11.2},{"gamma":1}]},{"featureType":"transit.station.airport","elementType":"geometry.fill","stylers":[{"color":"#21b6d6"},{"lightness":"-9"},{"visibility":"on"},{"gamma":"1.00"}]},{"featureType":"transit.station.bus","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"transit.station.bus","elementType":"labels","stylers":[{"visibility":"on"}]},{"featureType":"transit.station.bus","elementType":"labels.icon","stylers":[{"visibility":"on"}]},{"featureType":"water","elementType":"all","stylers":[{"hue":"#00B6FF"},{"saturation":4.2},{"lightness":-63.4},{"gamma":1}]},{"featureType":"water","elementType":"geometry.fill","stylers":[{"color":"#19b6eb"}]}];
+			var mapOptions = {
+				zoom: 14,
+				disableDefaultUI: true,
+				scrollwheel: false,
+				panControl: false,
+				zoomControl: false,
+				zoomControlOptions: {
+					style: google.maps.ZoomControlStyle.SMALL,
+					position: google.maps.ControlPosition.RIGHT_CENTER
+				},
+				scaleControl: true,
+				center: new google.maps.LatLng(longitude, latitude)
+			};
+
+			map = new google.maps.Map(document.getElementById('maps'), mapOptions);
+			var mapType = new google.maps.StyledMapType(stylez, { name:"Grayscale" });
+			map.mapTypes.set('tehgrayz', mapType);
+    		map.setMapTypeId('tehgrayz');
+			var image = 'img/icons/baloon.png';
+			var myLatLng = new google.maps.LatLng(longitude, latitude);
+			var beachMarker = new google.maps.Marker({
+				position: myLatLng,
+				map: map,
+				icon: image,
+				title:""
+			});
+		}
+		google.maps.event.addDomListener(window, 'load', initialize);
+
+		google.maps.event.addDomListener(window, "resize", function() {
+			var center = map.getCenter();
+			google.maps.event.trigger(map, "resize");
+			map.setCenter(center); 
+		});
+	}
+	if($('#maps').length) {
+		var longitude = $('#maps').data("longitude"),
+			latitude = $('#maps').data("latitude");
+
+		gMaps($('#maps'), longitude, latitude);
+	}
 
 })
