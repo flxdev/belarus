@@ -47,6 +47,12 @@ $(document).ready(function () {
 			speed: 6000,
 			cssEase: 'linear'
 		});
+		$('.news-gallery').slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			arrows: false,
+			dots: true
+		})
 		// $('.partners-rotator').on('mouseenter', function(){
 		// 	$(this).slick('slickPause')
 		// });
