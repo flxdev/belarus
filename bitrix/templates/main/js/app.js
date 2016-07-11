@@ -243,7 +243,7 @@ $(document).ready(function () {
 		});
 	} mobileMenu();
 
-	$(document).scroll(function() {    
+	$(document).on('scroll', function() {    
 		var scroll 			= $(this).scrollTop(),
 			hDoc 			= $(document).height(),
 			hWind 			= $(window).height(),
@@ -258,6 +258,11 @@ $(document).ready(function () {
 			scrolltop.removeClass('is-active');
 			$(".scrolltop").fadeOut(600);
 		}
+	});
+	$('.goto').on('click', function() {
+		$('html, body').animate({
+			scrollTop: 0
+		}, 800);
 	});
 
 })
