@@ -3320,3 +3320,58 @@ data {
 	border-top: 1px solid $grey;
 	border-bottom: 1px solid $grey;
 }
+.mobile__wrap {
+	display: none;
+	position: fixed;
+	top: 39px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: $white;
+	z-index: 15;
+	overflow-y: auto;
+	padding: 70px 0;
+	text-align: center;
+	.close {
+		width: 32px;
+		height: 31px;
+		background-image: url(../img/icons/close.png);
+		background-size: cover;
+		position: fixed;
+		right: 25px;
+		top: 69px;
+		cursor: pointer;
+	}
+	.mobile-menu {
+		.menu-item {
+			padding: 15px 0;
+			a {
+				font-family: $RLight;
+				font-size: 32px;
+				color: $blue;
+				@include r(640) {
+					font-size: 18px;
+				}
+			}
+		}
+	}
+}
+.goto {
+	width: 50px;
+	height: 50px;
+	position: fixed;
+	z-index: 13;
+	right: 20px;
+	bottom: -20px;
+	background-image: url(../img/icons/goto.png);
+	cursor: pointer;
+	opacity: 0;
+	transition: opacity 0.3s ease 0s, bottom 0.5s ease 0s;
+	@include r(980) {
+		display: none!important;
+	}
+	&.is-active {
+		bottom: 70px;
+		opacity: 1;
+	}
+}

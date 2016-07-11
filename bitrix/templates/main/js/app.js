@@ -226,4 +226,38 @@ $(document).ready(function () {
 		gMaps($('#maps'), longitude, latitude);
 	}
 
+	// mobile-menu
+	function mobileMenu(){
+		var trigger = $('.burger'),
+			menu = $('.mobile__wrap'),
+			close = menu.find('.close'),
+			body = $('body');
+
+		trigger.on('click', function(){
+			body.css('overflow', 'hidden');
+			menu.fadeIn(250);
+		});
+		close.on('click', function(){
+			body.removeAttr('style');
+			menu.fadeOut(250);
+		});
+	} mobileMenu();
+
+	$(document).scroll(function() {    
+		var scroll 			= $(this).scrollTop(),
+			hDoc 			= $(document).height(),
+			hWind 			= $(window).height(),
+			hFooter 		= $('.footer').height(),
+			scrolltop 		= $('.goto'),
+			scroll_position = hDoc - hWind - hFooter;
+		if (scroll > 100) {
+			scrolltop.fadeIn(600);
+			scrolltop.addClass('is-active');
+		}
+		else{
+			scrolltop.removeClass('is-active');
+			$(".scrolltop").fadeOut(600);
+		}
+	});
+
 })
