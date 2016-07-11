@@ -509,7 +509,7 @@ p {
 		@include x-rem(height, 40px);
 		@include x-rem(border-radius, 20px);
 		span {
-			@include x-rem(padding, 12px 0);
+			@include x-rem(padding, 13px 0);
 		}
 	}
 	&.arrow {

@@ -189,7 +189,7 @@ $(document).ready(function () {
 				disableDefaultUI: true,
 				scrollwheel: false,
 				panControl: false,
-				zoomControl: false,
+				zoomControl: true,
 				zoomControlOptions: {
 					style: google.maps.ZoomControlStyle.SMALL,
 					position: google.maps.ControlPosition.RIGHT_CENTER
