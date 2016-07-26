@@ -78,11 +78,6 @@
 							<a href="" class="breadcrumbs-item active">Национальная Библиотека РБ</a>
 						</div>
 					</div>
-					<div class="row">
-						<div class="col-100">
-							<div class="h1">Новости музея</div>
-						</div>
-					</div>
 				</div>
 			</section>
 			<section class="container container-content">
@@ -295,16 +290,16 @@
 			<div class="l">
 				<div class="footer-col">
 					<div class="form">
-						<form action="">
+						<form action="" class="validation">
 							<div class="form-title">Скидка 10%</div>
 							<p>При подписке на наши новости о проводимых мероприятиях и событиях из жизни музея</p>
 							<div class="field">
 								<div class="field-body">
-									<input type="text" placeholder="Ваш e-mail">
+									<input type="text" placeholder="Ваш e-mail"  data-validation="email">
 								</div>
 							</div>
 							<div class="field">
-								<button class="btn blue small">
+								<button class="btn blue small" type="submit">
 									<span>Подписаться и получить скидку</span>
 								</button>
 							</div>
@@ -372,7 +367,7 @@
 					</div>
 					<div class="field">
 						<div class="field__body">
-							<input type="text" class="input mask" placeholder="Телефон*" data-validation="length" data-validation-length="4-19">
+							<input type="text" class="input chars" placeholder="Телефон*" data-validation="length" data-validation-length="4-19">
 						</div>
 					</div>
 					<div class="field">

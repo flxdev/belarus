@@ -76,7 +76,7 @@
 					<div class="head__descr">Более 70 культурно-архитектурных достопримечательностей Беларуси,&nbsp;воссозданых в масштабе</div>
 				</div>
 			</section>
-			<section class="container">
+			<section class="container container-grey">
 				<div class="l">
 					<div class="row">
 						<div class="col-33">
@@ -188,7 +188,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="container container-rotator">
+			<section class="container container-rotator container-grey">
 				<div class="l">
 					<div class="row">
 						<div class="col-33">
@@ -283,22 +283,18 @@
 					</div>
 					<div class="row">
 						<div class="partners-rotator">
-							<div class="partners-item">
-								<img src="img/partners/baymont.png" alt="">
-							</div>
-							<div class="partners-item">
-								<img src="img/partners/akf.png" alt="">
-							</div>
-							<a href="#" class="partners-item"><img src="img/partners/vk.png" alt=""></a>
-							<a href="#" class="partners-item"><img src="img/partners/tophotels.png" alt=""></a>
-							<a href="#" class="partners-item"><img src="img/partners/tophotelsproject.png" alt=""></a>
-							<a href="#" class="partners-item"><img src="img/partners/taj.png" alt=""></a>
-							<a href="#" class="partners-item"><img src="img/partners/baymont.png" alt=""></a>
-							<a href="#" class="partners-item"><img src="img/partners/akf.png" alt=""></a>
-							<a href="#" class="partners-item"><img src="img/partners/vk.png" alt=""></a>
-							<a href="#" class="partners-item"><img src="img/partners/tophotels.png" alt=""></a>
-							<a href="#" class="partners-item"><img src="img/partners/tophotelsproject.png" alt=""></a>
-							<a href="#" class="partners-item"><img src="img/partners/taj.png" alt=""></a>
+							<a href="#" class="partners-item"><img src="img/partners/baymont-hover.png" alt=""><img src="img/partners/baymont.png" alt=""></a>
+							<a href="#" class="partners-item"><img src="img/partners/akf-hover.png" alt=""><img src="img/partners/akf.png" alt=""></a>
+							<a href="#" class="partners-item"><img src="img/partners/vk-hover.png" alt=""><img src="img/partners/vk.png" alt=""></a>
+							<a href="#" class="partners-item"><img src="img/partners/tophotels-hover.png" alt=""><img src="img/partners/tophotels.png" alt=""></a>
+							<a href="#" class="partners-item"><img src="img/partners/tophotelsproject-hover.png" alt=""><img src="img/partners/tophotelsproject.png" alt=""></a>
+							<a href="#" class="partners-item"><img src="img/partners/taj-hover.png" alt=""><img src="img/partners/taj.png" alt=""></a>
+							<a href="#" class="partners-item"><img src="img/partners/baymont-hover.png" alt=""><img src="img/partners/baymont.png" alt=""></a>
+							<a href="#" class="partners-item"><img src="img/partners/akf-hover.png" alt=""><img src="img/partners/akf.png" alt=""></a>
+							<a href="#" class="partners-item"><img src="img/partners/vk-hover.png" alt=""><img src="img/partners/vk.png" alt=""></a>
+							<a href="#" class="partners-item"><img src="img/partners/tophotels-hover.png" alt=""><img src="img/partners/tophotels.png" alt=""></a>
+							<a href="#" class="partners-item"><img src="img/partners/tophotelsproject-hover.png" alt=""><img src="img/partners/tophotelsproject.png" alt=""></a>
+							<a href="#" class="partners-item"><img src="img/partners/taj-hover.png" alt=""><img src="img/partners/taj.png" alt=""></a>
 						</div>
 					</div>
 				</div>
@@ -324,16 +320,16 @@
 			<div class="l">
 				<div class="footer-col">
 					<div class="form">
-						<form action="">
+						<form action="" class="validation">
 							<div class="form-title">Скидка 10%</div>
 							<p>При подписке на наши новости о проводимых мероприятиях и событиях из жизни музея</p>
 							<div class="field">
 								<div class="field-body">
-									<input type="text" placeholder="Ваш e-mail">
+									<input type="text" placeholder="Ваш e-mail"  data-validation="email">
 								</div>
 							</div>
 							<div class="field">
-								<button class="btn blue small">
+								<button class="btn blue small" type="submit">
 									<span>Подписаться и получить скидку</span>
 								</button>
 							</div>
@@ -401,7 +397,7 @@
 					</div>
 					<div class="field">
 						<div class="field__body">
-							<input type="text" class="input mask" placeholder="Телефон*" data-validation="length" data-validation-length="4-19">
+							<input type="text" class="input chars" placeholder="Телефон*" data-validation="length" data-validation-length="4-19">
 						</div>
 					</div>
 					<div class="field">

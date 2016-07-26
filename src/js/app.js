@@ -125,6 +125,15 @@ $(document).ready(function () {
 		};
 	} validator();
 
+	$('input[data-validation]')
+		.on('validation', function(evt, valid) {
+			if(valid) {
+				$(this).parents('form').removeClass('error');
+				$(this).parents('.field').siblings().find('input').removeAttr('data-validation').removeClass('error');
+				$(this).parents('.field').siblings().find('.field__body').removeClass('has-error');
+			}
+		});
+
 	function valid(form) {
 		$(form).parents('.popup__wrap').find('.front').removeClass("active");
 		$(form).parents('.popup__wrap').find('.back').addClass("active");			
@@ -264,5 +273,15 @@ $(document).ready(function () {
 			scrollTop: 0
 		}, 800);
 	});
+
+
+	// input only numbers
+	function chars() {
+		$('.chars').on('keypress', function(key){
+			if((key.charCode < 40 || key.charCode > 41) && (key.charCode < 48 || key.charCode > 57) && (key.charCode != 45) && (key.charCode != 32) && (key.charCode != 43) && (key.charCode != 0))
+				return false;
+		});
+
+	} chars();
 
 })
