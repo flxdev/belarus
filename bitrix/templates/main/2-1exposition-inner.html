@@ -34,7 +34,7 @@
 							</ul>
 						</div>
 					</div>
-					<a href="" class="link" data-popup="callback">
+					<a href="" class="link" data-popup="callback" data-select="1">
 						<span>Обратный звонок</span>
 					</a>
 				</div>
@@ -90,24 +90,62 @@
 							<div class="col-25">
 								<div class="vertical-gallery">
 									<div class="item">
-										<div>
-											<img src="img/expo/expo-1.jpg" alt="">
-										</div>
+										<a href="img/images-1.jpg" class="fancy" rel="fancy">
+											<div>
+												<img src="img/images-1.jpg" alt="">
+											</div>
+										</a>
 									</div>
 									<div class="item">
-										<div>
-											<img src="img/expo/expo-1.jpg" alt="">
-										</div>
+										<a href="img/images-1.jpg" class="fancy" rel="fancy">
+											<div>
+												<img src="img/images-1.jpg" alt="">
+											</div>
+										</a>
 									</div>
-									<a href="" class="item">
-										<div>
-											<img src="img/expo/expo-3.jpg" alt="">
-											<div class="brazzers-gallery__more">
-												<div class="brazzers-gallery__more-wrapper">
-													<div class="brazzers-gallery__more-icon"></div>
-													<div class="brazzers-gallery__more-text">+ еще 3 фотографии</div>
+									<div class="item">
+										<a href="img/images-1.jpg" class="fancy" rel="fancy">
+											<div>
+												<img src="img/images-1.jpg" alt="">
+												<div class="brazzers-gallery__more">
+													<div class="brazzers-gallery__more-wrapper">
+														<div class="brazzers-gallery__more-icon"></div>
+														<div class="brazzers-gallery__more-text">+ еще 3 фотографии</div>
+													</div>
 												</div>
 											</div>
+										</a>
+									</div>
+								</div>
+								<div class="fancy-hidden">
+									<a href="img/images-1.jpg" class="fancy" rel="fancy">
+										<div>
+											<img src="img/images-1.jpg" alt="">
+										</div>
+									</a>
+									<a href="img/images-1.jpg" class="fancy" rel="fancy">
+										<div>
+											<img src="img/images-1.jpg" alt="">
+										</div>
+									</a>
+									<a href="img/images-1.jpg" class="fancy" rel="fancy">
+										<div>
+											<img src="img/images-1.jpg" alt="">
+										</div>
+									</a>
+									<a href="img/images-1.jpg" class="fancy" rel="fancy">
+										<div>
+											<img src="img/images-1.jpg" alt="">
+										</div>
+									</a>
+									<a href="img/images-1.jpg" class="fancy" rel="fancy">
+										<div>
+											<img src="img/images-1.jpg" alt="">
+										</div>
+									</a>
+									<a href="img/images-1.jpg" class="fancy" rel="fancy">
+										<div>
+											<img src="img/images-1.jpg" alt="">
 										</div>
 									</a>
 								</div>
@@ -128,7 +166,7 @@
 							<div class="col-33">
 								<div class="chronicle-item">
 									<div class="icon">
-										<img src="img/icons/icon-time.png" alt="">
+										<img src="img/icons/icon-location.png" alt="">
 									</div>
 									<div class="overlay">
 										<div class="chronicle-head">Населенный пункт \ Область</div>
@@ -139,11 +177,22 @@
 							<div class="col-33">
 								<div class="chronicle-item">
 									<div class="icon">
-										<img src="img/icons/icon-location.png" alt="">
+										<img src="img/icons/icon-time.png" alt="">
 									</div>
 									<div class="overlay">
 										<div class="chronicle-head">Время постройки</div>
 										<div class="chronicle-name">XVI в.</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-33">
+								<div class="chronicle-item">
+									<div class="icon">
+										<img src="img/icons/icon-location.png" alt="">
+									</div>
+									<div class="overlay">
+										<div class="chronicle-head">Расстояние от Минска</div>
+										<div class="chronicle-name">250 км</div>
 									</div>
 								</div>
 							</div>
@@ -207,7 +256,7 @@
 													<div class="option-body"><span class="price">150</span> usd</div>
 												</div>
 												<div class="option-item">
-													<a href="" class="btn yellow">
+													<a data-popup="callback" class="btn yellow" data-select="3">
 														<span>Заказать экскурсию</span>
 													</a>
 													<p>* В стоимость экскурсии включена стоимость проживания и двух завтраков</p>
@@ -345,14 +394,15 @@
 					<div class="field">
 						<div class="field__body">
 							<select class="select">
-								<option value="Заказ экскурсии в музей">Заказ экскурсии в музей</option>
-								<option value="Аренда Event-пространства">Аренда Event-пространства</option>
-								<option value="Заказ выездной экскурсии">Заказ выездной экскурсии</option>
-								<option value="Задать вопрос">Задать вопрос</option>
-								<option value="Корпроративное партнерство">Корпроративное партнерство</option>
-								<option value="Меценатство">Меценатство</option>
-								<option value="Волонтерство">Волонтерство</option>
-								<option value="Предложение">Предложение</option>
+								<option value="Заказ экскурсии в музей" data-option="1">Заказ экскурсии в музей</option>
+								<option value="Аренда Event-пространства" data-option="2">Аренда Event-пространства</option>
+								<option value="Заказ выездной экскурсии" data-option="3">Заказ выездной экскурсии</option>
+								<option value="Задать вопрос" data-option="4">Задать вопрос</option>
+								<option value="Корпроративное партнерство" data-option="5">Корпроративное партнерство</option>
+								<option value="Меценатство" data-option="6">Меценатство</option>
+								<option value="Волонтерство" data-option="7">Волонтерство</option>
+								<option value="Предложение" data-option="8">Предложение</option>
+								<option value="Посетить мастер-класс" data-option="9">Посетить мастер-класс</option>
 							</select>
 						</div>
 					</div>

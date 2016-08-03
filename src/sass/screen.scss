@@ -160,8 +160,8 @@ p {
 		@include x-rem(padding, 23px 0 25px 0);
 		.logo {
 			@include x-rem(width, 138px);
-			@include x-rem(height, 43px)
-			background-image: url(../img/icons/logo.png);
+			@include x-rem(height, 46px)
+			background-image: url(../img/icons/logo-x2.png);
 			background-size: cover;
 			float: left;
 			@include x-rem(margin, 0 69px 0 6px);
@@ -830,6 +830,7 @@ input::-ms-clear {
 			background-image: url(../img/section-1.jpg);
 			background-size: cover;
 			background-position: 50%;
+			overflow: hidden;
 			.h1 {
 				&::after {
 					background-color: $h; 
@@ -2442,6 +2443,7 @@ data {
 		@include r(980) {
 			width: 33.33%;
 			float: left;
+			padding: 0 10px;
 		}
 		@include r(980) {
 			width: 50%;
@@ -2465,6 +2467,10 @@ data {
 			position: relative;
 		}
 	}
+	a {
+		display: block;
+		position: relative;
+	}
 	.slick-dots {
 		bottom: -15px;
 		li {
@@ -2481,6 +2487,10 @@ data {
 			background-color: rgba(29, 80, 135, 0.6);
 		}
 	}
+}
+
+.fancy-hidden {
+	display: none;
 }
 .container-chronicle {
 	padding: 25px 0;
@@ -3243,47 +3253,47 @@ data {
 			}
 		}
 	}
-	.slick-dots {
-		left: 15px;
-		bottom: 20px;
-		right: auto;
-		li {
-			width: 38px;
-			height: 38px;
-			border: 1px solid $white;
-			text-indent: 0;
-			background-color: $white;
-			line-height: 36px;
-			transition: border-color 0.3s ease, background-color 0.3s ease;
-			@include r(735) {
-				width: 25px;
-				height: 25px;
-				line-height: 21px;
-				button {
-					font-size: 13px;
-				}
-			}
-			button {
-				font-family: $R;
-				font-size: 15px;
-				color: $blue;
-				transition: color 0.3s ease;
-				@include r(735) {
-					font-size: 13px;
-				}
-			}
-			&.slick-active {
-				border-color: $blue;
-			}
-			&:hover {
-				button {
-					color: $white;
-				}
-				border-color: $blue;
-				background-color: $blue;
-			}
-		}
-	}
+	// .slick-dots {
+	// 	left: 15px;
+	// 	bottom: 20px;
+	// 	right: auto;
+	// 	li {
+	// 		width: 38px;
+	// 		height: 38px;
+	// 		border: 1px solid $white;
+	// 		text-indent: 0;
+	// 		background-color: $white;
+	// 		line-height: 36px;
+	// 		transition: border-color 0.3s ease, background-color 0.3s ease;
+	// 		@include r(735) {
+	// 			width: 25px;
+	// 			height: 25px;
+	// 			line-height: 21px;
+	// 			button {
+	// 				font-size: 13px;
+	// 			}
+	// 		}
+	// 		button {
+	// 			font-family: $R;
+	// 			font-size: 15px;
+	// 			color: $blue;
+	// 			transition: color 0.3s ease;
+	// 			@include r(735) {
+	// 				font-size: 13px;
+	// 			}
+	// 		}
+	// 		&.slick-active {
+	// 			border-color: $blue;
+	// 		}
+	// 		&:hover {
+	// 			button {
+	// 				color: $white;
+	// 			}
+	// 			border-color: $blue;
+	// 			background-color: $blue;
+	// 		}
+	// 	}
+	// }
 	.subscription {
 		position: absolute;
 		top: 0;
@@ -3666,5 +3676,50 @@ data {
 	&.is-active {
 		bottom: 70px;
 		opacity: 1;
+	}
+}
+.accord {
+	@include r(980) {
+		.col-33 {
+			&:first-of-type {
+				position: relative;
+				&::after {
+					content: '»';
+					position: absolute;
+					right: 5%;
+					color: $blue;
+					@include x-rem(font-size, 30px);
+					@include x-rem(bottom, -25px);
+					font-family: $Nautilus;
+					opacity: 1;
+					transition: opacity 0.3s ease;
+				}
+				&.open {
+					&::after {
+						opacity: 0;
+					}
+				}
+			}
+		}
+		.col-33:not(:first-of-type) {
+			display: none;
+		}
+	}
+}
+#fancybox-lock *, #fancybox-lock *:before, #fancybox-lock *:after,
+#fancybox-thumbs *, #fancybox-thumbs *:before, #fancybox-thumbs *:after {
+	box-sizing: initial;
+}
+.news-show {
+	text-align: center;
+	display: none;
+	@include r(480) {
+		display: block;
+	}
+	&.open {
+		margin-top: 60px;
+	}
+	.btn {
+		min-width: 100px;
 	}
 }
