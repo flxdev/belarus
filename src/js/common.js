@@ -7,6 +7,9 @@
 //= lib/social-likes.min.js
 //= lib/jquery.fancybox.js
 //= lib/jquery.fancybox-thumbs.js
+<<<<<<< HEAD
 //= lib/multiple-select.js
+=======
+>>>>>>> 186b0bcad30853ee16901e36a365aa207d892be4
 
 //= app.js

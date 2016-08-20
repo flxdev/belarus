@@ -3930,7 +3930,6 @@ $(document).ready(function () {
 		var _ = $(this);
 
 		_.on('click', function(e) {
-
 			popup($(this).data('popup'), $(this).data('select'));
 			e.preventDefault();
 		});
@@ -3944,8 +3943,7 @@ $(document).ready(function () {
 			close = popupSelector.find('.close'),
 			btnSuccess = popupSelector.find('.btn__success'),
 			html = $('html'),
-			number = item,
-			select = popupSelector.find('options');
+			number = item;
 
 		popupSelector
 			.fadeIn({
