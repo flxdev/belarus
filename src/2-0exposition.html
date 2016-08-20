@@ -1,0 +1,896 @@
+<!doctype html>
+<html>
+<head>
+	<title>2-0exposition</title>
+	//= includes/head.html
+</head>
+<body>
+<div class="viewport">
+	<div class="out">
+		//= includes/header.html
+		<div class="wrapper">
+			<section class="container container-breadcrumbs">
+				<div class="l">
+					<div class="row">
+						<div class="breadcrumbs">
+							<a href="" class="breadcrumbs-item"><i class="icon"></i>Главная</a>
+							<a href="" class="breadcrumbs-item">Экспозиция</a>
+							<a href="" class="breadcrumbs-item active">Национальная Библиотека РБ</a>
+						</div>
+					</div>
+					<div class="row">
+						<div class="head">
+							<div class="col-33">
+								<div class="h1">Экспозиция музея</div>
+								<p>Здесь вы можете найти ключевые достопримечательности, представленные в нашем музее. Для вас представлена интересная информацию о ключевых объектах.</p>
+							</div>
+							<div class="col-33">
+								<p>Специально для вас, из множества достопримечательностей Беларуси мы отобрали 70 ключевых, что бы за два часа вы смогли увидеть самые значимый объекты из истории Беларуси, что бы лучше познакомиться с культурой беларусов. Благодаря новым технологиям, это будет самый комфортный и инновационный музей. Макеты интерактивны, вы проведете время в удовольствие и с пользой. В экспозиции музея вы повстречаете самые значимые архитектурные достопримечательности, в том числе малоизвестные.</p>
+							</div>
+							<div class="col-33">
+								<p>В экспозиции музея вы повстречаете самые значимые архитектурные достопримечательности, в том числе малоизвестные, познакомитесь с интересными фактами из истории замков, дворцов, усадеб, храмов. Часть из них включена в список Всемирного наследия Юнеско. Увидите утраченные но воссозданные Кревский, Новгородский замки. Музей "Беларусь в миниатюре" открыт для посетителей ежедневно.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="container conteiner-filter container-grey">
+				<div class="l">
+					<div class="row">
+						<div class="col-100">
+							<div class="h6">Достопримечательности в экспозиции</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="form">
+							<form action="">
+								<div class="col-33">
+									<div class="filter-item">
+										<div class="filter-head">Область</div>
+										<div class="filter-body">
+											<div class="filter-field check-field">
+												<input type="checkbox" id="allregion" name="region">
+												<label for="allregion" class="check">
+													<span>Все области</span>
+												</label>
+											</div>
+											<div class="filter-field check-field">
+												<input type="checkbox" id="Grodno" name="region">
+												<label for="Grodno" class="check">
+													<span>Гродненская</span>
+												</label>
+											</div>
+											<div class="filter-field check-field">
+												<input type="checkbox" id="Minsk" name="region">
+												<label for="Minsk" class="check">
+													<span>Минская</span>
+												</label>
+											</div>
+											<div class="filter-field check-field">
+												<input type="checkbox" id="Gomel" name="region">
+												<label for="Gomel" class="check">
+													<span>Гомельская</span>
+												</label>
+											</div>
+											<div class="filter-field check-field">
+												<input type="checkbox" id="Brest" name="region">
+												<label for="Brest" class="check">
+													<span>Брастская</span>
+												</label>
+											</div>
+											<div class="filter-field check-field">
+												<input type="checkbox" id="Mohilev" name="region">
+												<label for="Mohilev" class="check">
+													<span>Могилевская</span>
+												</label>
+											</div>
+											<div class="filter-field check-field">
+												<input type="checkbox" id="Vitebsk" name="region">
+												<label for="Vitebsk" class="check">
+													<span>Витебская</span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-33">
+									<div class="filter-item">
+										<div class="filter-head">Время постройки</div>
+										<div class="filter-body">
+											<div class="filter-field check-field">
+												<input type="checkbox" id="alltime" name="time">
+												<label for="alltime" class="check">
+													<span>Любое</span>
+												</label>
+											</div>
+											<div class="filter-field check-field">
+												<input type="checkbox" id="point-1" name="time">
+												<label for="point-1" class="check">
+													<span>XV-XVII вв.</span>
+												</label>
+											</div>
+											<div class="filter-field check-field">
+												<input type="checkbox" id="point-2" name="time">
+												<label for="point-2" class="check">
+													<span>X-XII вв.</span>
+												</label>
+											</div>
+											<div class="filter-field check-field">
+												<input type="checkbox" id="point-3" name="time">
+												<label for="point-3" class="check">
+													<span>XVII-XX вв.</span>
+												</label>
+											</div>
+											<div class="filter-field check-field">
+												<input type="checkbox" id="point-4" name="time">
+												<label for="point-4" class="check">
+													<span>XII-XV вв.</span>
+												</label>
+											</div>
+											<div class="filter-field check-field">
+												<input type="checkbox" id="point-5" name="time">
+												<label for="point-5" class="check">
+													<span>XXI вв.</span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-33">
+									<div class="filter-item">
+										<div class="filter-head">Расстояние от Минска</div>
+										<div class="filter-body">
+											<div class="filter-field check-field">
+												<input type="checkbox" id="alldistance" name="distance">
+												<label for="alldistance" class="check">
+													<span>Любое</span>
+												</label>
+											</div>
+											<div class="filter-field check-field">
+												<input type="checkbox" id="point-150" name="distance">
+												<label for="point-150" class="check">
+													<span>до 150 км</span>
+												</label>
+											</div>
+											<div class="filter-field check-field">
+												<input type="checkbox" id="point-50" name="distance">
+												<label for="point-50" class="check">
+													<span>до 50 км</span>
+												</label>
+											</div>
+											<div class="filter-field check-field">
+												<input type="checkbox" id="point-200" name="distance">
+												<label for="point-200" class="check">
+													<span>до 200 км</span>
+												</label>
+											</div>
+											<div class="filter-field check-field">
+												<input type="checkbox" id="point-100" name="distance">
+												<label for="point-100" class="check">
+													<span>до 100 км</span>
+												</label>
+											</div>
+											<div class="filter-field check-field">
+												<input type="checkbox" id="point-250" name="distance">
+												<label for="point-250" class="check">
+													<span>до 250 км</span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="container">
+				<div class="l">
+					<div class="row">
+						<div class="col-100">
+							<div class="conteiner-expo">
+								<a href="#" class="event-item">
+									<div class="case-img">
+										<img src="img/expo/expo-1.jpg" alt="">
+										<div class="event-gallery">
+											<div class="brazzers-gallery">
+												<div class="brazzers-gallery__page brazzers-gallery__page_column_5">
+													<div class="brazzers-gallery__image-wrapper">
+														<img src="img/expo/expo-2.jpg" alt="">
+													</div>
+													<div class="brazzers-gallery__button"></div>
+												</div>
+												<div class="brazzers-gallery__page brazzers-gallery__page_column_5">
+													<div class="brazzers-gallery__image-wrapper">
+														<img src="img/expo/expo-3.jpg" alt="">
+													</div>
+													<div class="brazzers-gallery__button"></div>
+												</div>
+												<div class="brazzers-gallery__page brazzers-gallery__page_column_5">
+													<div class="brazzers-gallery__image-wrapper">
+														<img src="img/expo/expo-4.jpg" alt="">
+													</div>
+													<div class="brazzers-gallery__button"></div>
+												</div>
+												<div class="brazzers-gallery__page brazzers-gallery__page_column_5">
+													<div class="brazzers-gallery__image-wrapper">
+														<img src="img/expo/expo-5.jpg" alt="">
+													</div>
+													<div class="brazzers-gallery__button"></div>
+												</div>
+												<div class="brazzers-gallery__page brazzers-gallery__page_column_5">
+													<div class="brazzers-gallery__image-wrapper">
+														<img src="img/expo/expo-6.jpg" alt="">
+														<div class="brazzers-gallery__more">
+															<div class="brazzers-gallery__more-wrapper">
+																<div class="brazzers-gallery__more-icon"></div>
+																<div class="brazzers-gallery__more-text">+ еще 3 фотографии</div>
+															</div>
+														</div>
+													</div>
+													<div class="brazzers-gallery__button"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="event-inner">
+										<div class="head">Индустриализация и зарождение дизайна (XVIII - начало XXвв.)</div>
+										<div class="event-position">
+											<span class="location">д. Любельполь, Брестская обл.</span>
+											<span class="time">XXI  в.</span>
+										</div>
+										<p>В экспозиции музея вы повстречаете самые значимые архитектурные достопримечательности, в том числе малоизвестные, познакомитесь с интересными фактами из истории замков, дворцов, усадеб, храмов.</p>
+									</div>
+									<div class="btn blue small arrow"></div>
+								</a>
+								<a href="#" class="event-item">
+									<div class="case-img">
+										<img src="img/expo/expo-2.jpg" alt="">
+										<div class="event-gallery">
+											<div class="brazzers-gallery">
+												<div class="brazzers-gallery__page brazzers-gallery__page_column_4">
+													<div class="brazzers-gallery__image-wrapper">
+														<img src="img/expo/expo-1.jpg" alt="">
+													</div>
+													<div class="brazzers-gallery__button"></div>
+												</div>
+												<div class="brazzers-gallery__page brazzers-gallery__page_column_4">
+													<div class="brazzers-gallery__image-wrapper">
+														<img src="img/expo/expo-3.jpg" alt="">
+													</div>
+													<div class="brazzers-gallery__button"></div>
+												</div>
+												<div class="brazzers-gallery__page brazzers-gallery__page_column_4">
+													<div class="brazzers-gallery__image-wrapper">
+														<img src="img/expo/expo-4.jpg" alt="">
+													</div>
+													<div class="brazzers-gallery__button"></div>
+												</div>
+												<div class="brazzers-gallery__page brazzers-gallery__page_column_4">
+													<div class="brazzers-gallery__image-wrapper">
+														<img src="img/expo/expo-5.jpg" alt="">
+													</div>
+													<div class="brazzers-gallery__button"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="event-inner">
+										<div class="head">Индустриализация и зарождение дизайна (XVIII - начало XXвв.)</div>
+										<div class="event-position">
+											<span class="location">д. Любельполь, Брестская обл.</span>
+											<span class="time">XXI  в.</span>
+										</div>
+										<p>В экспозиции музея вы повстречаете самые значимые архитектурные достопримечательности, в том числе малоизвестные, познакомитесь с интересными фактами из истории замков, дворцов, усадеб, храмов.</p>
+									</div>
+									<div class="btn blue small arrow"></div>
+								</a>
+								<a href="#" class="event-item">
+									<div class="case-img">
+										<img src="img/expo/expo-3.jpg" alt="">
+										<div class="event-gallery">
+											<div class="brazzers-gallery">
+												<div class="brazzers-gallery__page brazzers-gallery__page_column_3">
+													<div class="brazzers-gallery__image-wrapper">
+														<img src="img/expo/expo-2.jpg" alt="">
+													</div>
+													<div class="brazzers-gallery__button"></div>
+												</div>
+												<div class="brazzers-gallery__page brazzers-gallery__page_column_3">
+													<div class="brazzers-gallery__image-wrapper">
+														<img src="img/expo/expo-5.jpg" alt="">
+													</div>
+													<div class="brazzers-gallery__button"></div>
+												</div>
+												<div class="brazzers-gallery__page brazzers-gallery__page_column_3">
+													<div class="brazzers-gallery__image-wrapper">
+														<img src="img/expo/expo-4.jpg" alt="">
+													</div>
+													<div class="brazzers-gallery__button"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="event-inner">
+										<div class="head">Индустриализация и зарождение дизайна (XVIII - начало XXвв.)</div>
+										<div class="event-position">
+											<span class="location">д. Любельполь, Брестская обл.</span>
+											<span class="time">XXI  в.</span>
+										</div>
+										<p>В экспозиции музея вы повстречаете самые значимые архитектурные достопримечательности, в том числе малоизвестные, познакомитесь с интересными фактами из истории замков, дворцов, усадеб, храмов.</p>
+									</div>
+									<div class="btn blue small arrow"></div>
+								</a>
+								<a href="#" class="event-item">
+									<div class="case-img">
+										<img src="img/expo/expo-1.jpg" alt="">
+										<div class="event-gallery">
+											<div class="brazzers-gallery">
+												<div class="brazzers-gallery__page brazzers-gallery__page_column_5">
+													<div class="brazzers-gallery__image-wrapper">
+														<img src="img/expo/expo-2.jpg" alt="">
+													</div>
+													<div class="brazzers-gallery__button"></div>
+												</div>
+												<div class="brazzers-gallery__page brazzers-gallery__page_column_5">
+													<div class="brazzers-gallery__image-wrapper">
+														<img src="img/expo/expo-3.jpg" alt="">
+													</div>
+													<div class="brazzers-gallery__button"></div>
+												</div>
+												<div class="brazzers-gallery__page brazzers-gallery__page_column_5">
+													<div class="brazzers-gallery__image-wrapper">
+														<img src="img/expo/expo-4.jpg" alt="">
+													</div>
+													<div class="brazzers-gallery__button"></div>
+												</div>
+												<div class="brazzers-gallery__page brazzers-gallery__page_column_5">
+													<div class="brazzers-gallery__image-wrapper">
+														<img src="img/expo/expo-5.jpg" alt="">
+													</div>
+													<div class="brazzers-gallery__button"></div>
+												</div>
+												<div class="brazzers-gallery__page brazzers-gallery__page_column_5">
+													<div class="brazzers-gallery__image-wrapper">
+														<img src="img/expo/expo-6.jpg" alt="">
+														<div class="brazzers-gallery__more">
+															<div class="brazzers-gallery__more-wrapper">
+																<div class="brazzers-gallery__more-icon"></div>
+																<div class="brazzers-gallery__more-text">+ еще 3 фотографии</div>
+															</div>
+														</div>
+													</div>
+													<div class="brazzers-gallery__button"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="event-inner">
+										<div class="head">Индустриализация и зарождение дизайна (XVIII - начало XXвв.)</div>
+										<div class="event-position">
+											<span class="location">д. Любельполь, Брестская обл.</span>
+											<span class="time">XXI  в.</span>
+										</div>
+										<p>В экспозиции музея вы повстречаете самые значимые архитектурные достопримечательности, в том числе малоизвестные, познакомитесь с интересными фактами из истории замков, дворцов, усадеб, храмов.</p>
+									</div>
+									<div class="btn blue small arrow"></div>
+								</a>
+								<a href="#" class="event-item">
+									<div class="case-img">
+										<img src="img/expo/expo-2.jpg" alt="">
+										<div class="event-gallery">
+											<div class="brazzers-gallery">
+												<div class="brazzers-gallery__page brazzers-gallery__page_column_4">
+													<div class="brazzers-gallery__image-wrapper">
+														<img src="img/expo/expo-1.jpg" alt="">
+													</div>
+													<div class="brazzers-gallery__button"></div>
+												</div>
+												<div class="brazzers-gallery__page brazzers-gallery__page_column_4">
+													<div class="brazzers-gallery__image-wrapper">
+														<img src="img/expo/expo-3.jpg" alt="">
+													</div>
+													<div class="brazzers-gallery__button"></div>
+												</div>
+												<div class="brazzers-gallery__page brazzers-gallery__page_column_4">
+													<div class="brazzers-gallery__image-wrapper">
+														<img src="img/expo/expo-4.jpg" alt="">
+													</div>
+													<div class="brazzers-gallery__button"></div>
+												</div>
+												<div class="brazzers-gallery__page brazzers-gallery__page_column_4">
+													<div class="brazzers-gallery__image-wrapper">
+														<img src="img/expo/expo-5.jpg" alt="">
+													</div>
+													<div class="brazzers-gallery__button"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="event-inner">
+										<div class="head">Индустриализация и зарождение дизайна (XVIII - начало XXвв.)</div>
+										<div class="event-position">
+											<span class="location">д. Любельполь, Брестская обл.</span>
+											<span class="time">XXI  в.</span>
+										</div>
+										<p>В экспозиции музея вы повстречаете самые значимые архитектурные достопримечательности, в том числе малоизвестные, познакомитесь с интересными фактами из истории замков, дворцов, усадеб, храмов.</p>
+									</div>
+									<div class="btn blue small arrow"></div>
+								</a>
+								<a href="#" class="event-item">
+									<div class="case-img">
+										<img src="img/expo/expo-3.jpg" alt="">
+										<div class="event-gallery">
+											<div class="brazzers-gallery">
+												<div class="brazzers-gallery__page brazzers-gallery__page_column_3">
+													<div class="brazzers-gallery__image-wrapper">
+														<img src="img/expo/expo-2.jpg" alt="">
+													</div>
+													<div class="brazzers-gallery__button"></div>
+												</div>
+												<div class="brazzers-gallery__page brazzers-gallery__page_column_3">
+													<div class="brazzers-gallery__image-wrapper">
+														<img src="img/expo/expo-5.jpg" alt="">
+													</div>
+													<div class="brazzers-gallery__button"></div>
+												</div>
+												<div class="brazzers-gallery__page brazzers-gallery__page_column_3">
+													<div class="brazzers-gallery__image-wrapper">
+														<img src="img/expo/expo-4.jpg" alt="">
+													</div>
+													<div class="brazzers-gallery__button"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="event-inner">
+										<div class="head">Индустриализация и зарождение дизайна (XVIII - начало XXвв.)</div>
+										<div class="event-position">
+											<span class="location">д. Любельполь, Брестская обл.</span>
+											<span class="time">XXI  в.</span>
+										</div>
+										<p>В экспозиции музея вы повстречаете самые значимые архитектурные достопримечательности, в том числе малоизвестные, познакомитесь с интересными фактами из истории замков, дворцов, усадеб, храмов.</p>
+									</div>
+									<div class="btn blue small arrow"></div>
+								</a>
+								<a href="#" class="event-item">
+									<div class="case-img">
+										<img src="img/expo/expo-1.jpg" alt="">
+										<div class="event-gallery">
+											<div class="brazzers-gallery">
+												<div class="brazzers-gallery__page brazzers-gallery__page_column_5">
+													<div class="brazzers-gallery__image-wrapper">
+														<img src="img/expo/expo-2.jpg" alt="">
+													</div>
+													<div class="brazzers-gallery__button"></div>
+												</div>
+												<div class="brazzers-gallery__page brazzers-gallery__page_column_5">
+													<div class="brazzers-gallery__image-wrapper">
+														<img src="img/expo/expo-3.jpg" alt="">
+													</div>
+													<div class="brazzers-gallery__button"></div>
+												</div>
+												<div class="brazzers-gallery__page brazzers-gallery__page_column_5">
+													<div class="brazzers-gallery__image-wrapper">
+														<img src="img/expo/expo-4.jpg" alt="">
+													</div>
+													<div class="brazzers-gallery__button"></div>
+												</div>
+												<div class="brazzers-gallery__page brazzers-gallery__page_column_5">
+													<div class="brazzers-gallery__image-wrapper">
+														<img src="img/expo/expo-5.jpg" alt="">
+													</div>
+													<div class="brazzers-gallery__button"></div>
+												</div>
+												<div class="brazzers-gallery__page brazzers-gallery__page_column_5">
+													<div class="brazzers-gallery__image-wrapper">
+														<img src="img/expo/expo-6.jpg" alt="">
+														<div class="brazzers-gallery__more">
+															<div class="brazzers-gallery__more-wrapper">
+																<div class="brazzers-gallery__more-icon"></div>
+																<div class="brazzers-gallery__more-text">+ еще 3 фотографии</div>
+															</div>
+														</div>
+													</div>
+													<div class="brazzers-gallery__button"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="event-inner">
+										<div class="head">Индустриализация и зарождение дизайна (XVIII - начало XXвв.)</div>
+										<div class="event-position">
+											<span class="location">д. Любельполь, Брестская обл.</span>
+											<span class="time">XXI  в.</span>
+										</div>
+										<p>В экспозиции музея вы повстречаете самые значимые архитектурные достопримечательности, в том числе малоизвестные, познакомитесь с интересными фактами из истории замков, дворцов, усадеб, храмов.</p>
+									</div>
+									<div class="btn blue small arrow"></div>
+								</a>
+								<a href="#" class="event-item">
+									<div class="case-img">
+										<img src="img/expo/expo-2.jpg" alt="">
+										<div class="event-gallery">
+											<div class="brazzers-gallery">
+												<div class="brazzers-gallery__page brazzers-gallery__page_column_4">
+													<div class="brazzers-gallery__image-wrapper">
+														<img src="img/expo/expo-1.jpg" alt="">
+													</div>
+													<div class="brazzers-gallery__button"></div>
+												</div>
+												<div class="brazzers-gallery__page brazzers-gallery__page_column_4">
+													<div class="brazzers-gallery__image-wrapper">
+														<img src="img/expo/expo-3.jpg" alt="">
+													</div>
+													<div class="brazzers-gallery__button"></div>
+												</div>
+												<div class="brazzers-gallery__page brazzers-gallery__page_column_4">
+													<div class="brazzers-gallery__image-wrapper">
+														<img src="img/expo/expo-4.jpg" alt="">
+													</div>
+													<div class="brazzers-gallery__button"></div>
+												</div>
+												<div class="brazzers-gallery__page brazzers-gallery__page_column_4">
+													<div class="brazzers-gallery__image-wrapper">
+														<img src="img/expo/expo-5.jpg" alt="">
+													</div>
+													<div class="brazzers-gallery__button"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="event-inner">
+										<div class="head">Индустриализация и зарождение дизайна (XVIII - начало XXвв.)</div>
+										<div class="event-position">
+											<span class="location">д. Любельполь, Брестская обл.</span>
+											<span class="time">XXI  в.</span>
+										</div>
+										<p>В экспозиции музея вы повстречаете самые значимые архитектурные достопримечательности, в том числе малоизвестные, познакомитесь с интересными фактами из истории замков, дворцов, усадеб, храмов.</p>
+									</div>
+									<div class="btn blue small arrow"></div>
+								</a>
+								<a href="#" class="event-item">
+									<div class="case-img">
+										<img src="img/expo/expo-3.jpg" alt="">
+										<div class="event-gallery">
+											<div class="brazzers-gallery">
+												<div class="brazzers-gallery__page brazzers-gallery__page_column_3">
+													<div class="brazzers-gallery__image-wrapper">
+														<img src="img/expo/expo-2.jpg" alt="">
+													</div>
+													<div class="brazzers-gallery__button"></div>
+												</div>
+												<div class="brazzers-gallery__page brazzers-gallery__page_column_3">
+													<div class="brazzers-gallery__image-wrapper">
+														<img src="img/expo/expo-5.jpg" alt="">
+													</div>
+													<div class="brazzers-gallery__button"></div>
+												</div>
+												<div class="brazzers-gallery__page brazzers-gallery__page_column_3">
+													<div class="brazzers-gallery__image-wrapper">
+														<img src="img/expo/expo-4.jpg" alt="">
+													</div>
+													<div class="brazzers-gallery__button"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="event-inner">
+										<div class="head">Индустриализация и зарождение дизайна (XVIII - начало XXвв.)</div>
+										<div class="event-position">
+											<span class="location">д. Любельполь, Брестская обл.</span>
+											<span class="time">XXI  в.</span>
+										</div>
+										<p>В экспозиции музея вы повстречаете самые значимые архитектурные достопримечательности, в том числе малоизвестные, познакомитесь с интересными фактами из истории замков, дворцов, усадеб, храмов.</p>
+									</div>
+									<div class="btn blue small arrow"></div>
+								</a>
+								<a href="#" class="event-item">
+									<div class="case-img">
+										<img src="img/expo/expo-1.jpg" alt="">
+										<div class="event-gallery">
+											<div class="brazzers-gallery">
+												<div class="brazzers-gallery__page brazzers-gallery__page_column_5">
+													<div class="brazzers-gallery__image-wrapper">
+														<img src="img/expo/expo-2.jpg" alt="">
+													</div>
+													<div class="brazzers-gallery__button"></div>
+												</div>
+												<div class="brazzers-gallery__page brazzers-gallery__page_column_5">
+													<div class="brazzers-gallery__image-wrapper">
+														<img src="img/expo/expo-3.jpg" alt="">
+													</div>
+													<div class="brazzers-gallery__button"></div>
+												</div>
+												<div class="brazzers-gallery__page brazzers-gallery__page_column_5">
+													<div class="brazzers-gallery__image-wrapper">
+														<img src="img/expo/expo-4.jpg" alt="">
+													</div>
+													<div class="brazzers-gallery__button"></div>
+												</div>
+												<div class="brazzers-gallery__page brazzers-gallery__page_column_5">
+													<div class="brazzers-gallery__image-wrapper">
+														<img src="img/expo/expo-5.jpg" alt="">
+													</div>
+													<div class="brazzers-gallery__button"></div>
+												</div>
+												<div class="brazzers-gallery__page brazzers-gallery__page_column_5">
+													<div class="brazzers-gallery__image-wrapper">
+														<img src="img/expo/expo-6.jpg" alt="">
+														<div class="brazzers-gallery__more">
+															<div class="brazzers-gallery__more-wrapper">
+																<div class="brazzers-gallery__more-icon"></div>
+																<div class="brazzers-gallery__more-text">+ еще 3 фотографии</div>
+															</div>
+														</div>
+													</div>
+													<div class="brazzers-gallery__button"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="event-inner">
+										<div class="head">Индустриализация и зарождение дизайна (XVIII - начало XXвв.)</div>
+										<div class="event-position">
+											<span class="location">д. Любельполь, Брестская обл.</span>
+											<span class="time">XXI  в.</span>
+										</div>
+										<p>В экспозиции музея вы повстречаете самые значимые архитектурные достопримечательности, в том числе малоизвестные, познакомитесь с интересными фактами из истории замков, дворцов, усадеб, храмов.</p>
+									</div>
+									<div class="btn blue small arrow"></div>
+								</a>
+								<a href="#" class="event-item">
+									<div class="case-img">
+										<img src="img/expo/expo-2.jpg" alt="">
+										<div class="event-gallery">
+											<div class="brazzers-gallery">
+												<div class="brazzers-gallery__page brazzers-gallery__page_column_4">
+													<div class="brazzers-gallery__image-wrapper">
+														<img src="img/expo/expo-1.jpg" alt="">
+													</div>
+													<div class="brazzers-gallery__button"></div>
+												</div>
+												<div class="brazzers-gallery__page brazzers-gallery__page_column_4">
+													<div class="brazzers-gallery__image-wrapper">
+														<img src="img/expo/expo-3.jpg" alt="">
+													</div>
+													<div class="brazzers-gallery__button"></div>
+												</div>
+												<div class="brazzers-gallery__page brazzers-gallery__page_column_4">
+													<div class="brazzers-gallery__image-wrapper">
+														<img src="img/expo/expo-4.jpg" alt="">
+													</div>
+													<div class="brazzers-gallery__button"></div>
+												</div>
+												<div class="brazzers-gallery__page brazzers-gallery__page_column_4">
+													<div class="brazzers-gallery__image-wrapper">
+														<img src="img/expo/expo-5.jpg" alt="">
+													</div>
+													<div class="brazzers-gallery__button"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="event-inner">
+										<div class="head">Индустриализация и зарождение дизайна (XVIII - начало XXвв.)</div>
+										<div class="event-position">
+											<span class="location">д. Любельполь, Брестская обл.</span>
+											<span class="time">XXI  в.</span>
+										</div>
+										<p>В экспозиции музея вы повстречаете самые значимые архитектурные достопримечательности, в том числе малоизвестные, познакомитесь с интересными фактами из истории замков, дворцов, усадеб, храмов.</p>
+									</div>
+									<div class="btn blue small arrow"></div>
+								</a>
+								<a href="#" class="event-item">
+									<div class="case-img">
+										<img src="img/expo/expo-3.jpg" alt="">
+										<div class="event-gallery">
+											<div class="brazzers-gallery">
+												<div class="brazzers-gallery__page brazzers-gallery__page_column_3">
+													<div class="brazzers-gallery__image-wrapper">
+														<img src="img/expo/expo-2.jpg" alt="">
+													</div>
+													<div class="brazzers-gallery__button"></div>
+												</div>
+												<div class="brazzers-gallery__page brazzers-gallery__page_column_3">
+													<div class="brazzers-gallery__image-wrapper">
+														<img src="img/expo/expo-5.jpg" alt="">
+													</div>
+													<div class="brazzers-gallery__button"></div>
+												</div>
+												<div class="brazzers-gallery__page brazzers-gallery__page_column_3">
+													<div class="brazzers-gallery__image-wrapper">
+														<img src="img/expo/expo-4.jpg" alt="">
+													</div>
+													<div class="brazzers-gallery__button"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="event-inner">
+										<div class="head">Индустриализация и зарождение дизайна (XVIII - начало XXвв.)</div>
+										<div class="event-position">
+											<span class="location">д. Любельполь, Брестская обл.</span>
+											<span class="time">XXI  в.</span>
+										</div>
+										<p>В экспозиции музея вы повстречаете самые значимые архитектурные достопримечательности, в том числе малоизвестные, познакомитесь с интересными фактами из истории замков, дворцов, усадеб, храмов.</p>
+									</div>
+									<div class="btn blue small arrow"></div>
+								</a>
+								<a href="#" class="event-item">
+									<div class="case-img">
+										<img src="img/expo/expo-1.jpg" alt="">
+										<div class="event-gallery">
+											<div class="brazzers-gallery">
+												<div class="brazzers-gallery__page brazzers-gallery__page_column_5">
+													<div class="brazzers-gallery__image-wrapper">
+														<img src="img/expo/expo-2.jpg" alt="">
+													</div>
+													<div class="brazzers-gallery__button"></div>
+												</div>
+												<div class="brazzers-gallery__page brazzers-gallery__page_column_5">
+													<div class="brazzers-gallery__image-wrapper">
+														<img src="img/expo/expo-3.jpg" alt="">
+													</div>
+													<div class="brazzers-gallery__button"></div>
+												</div>
+												<div class="brazzers-gallery__page brazzers-gallery__page_column_5">
+													<div class="brazzers-gallery__image-wrapper">
+														<img src="img/expo/expo-4.jpg" alt="">
+													</div>
+													<div class="brazzers-gallery__button"></div>
+												</div>
+												<div class="brazzers-gallery__page brazzers-gallery__page_column_5">
+													<div class="brazzers-gallery__image-wrapper">
+														<img src="img/expo/expo-5.jpg" alt="">
+													</div>
+													<div class="brazzers-gallery__button"></div>
+												</div>
+												<div class="brazzers-gallery__page brazzers-gallery__page_column_5">
+													<div class="brazzers-gallery__image-wrapper">
+														<img src="img/expo/expo-6.jpg" alt="">
+														<div class="brazzers-gallery__more">
+															<div class="brazzers-gallery__more-wrapper">
+																<div class="brazzers-gallery__more-icon"></div>
+																<div class="brazzers-gallery__more-text">+ еще 3 фотографии</div>
+															</div>
+														</div>
+													</div>
+													<div class="brazzers-gallery__button"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="event-inner">
+										<div class="head">Индустриализация и зарождение дизайна (XVIII - начало XXвв.)</div>
+										<div class="event-position">
+											<span class="location">д. Любельполь, Брестская обл.</span>
+											<span class="time">XXI  в.</span>
+										</div>
+										<p>В экспозиции музея вы повстречаете самые значимые архитектурные достопримечательности, в том числе малоизвестные, познакомитесь с интересными фактами из истории замков, дворцов, усадеб, храмов.</p>
+									</div>
+									<div class="btn blue small arrow"></div>
+								</a>
+								<a href="#" class="event-item">
+									<div class="case-img">
+										<img src="img/expo/expo-2.jpg" alt="">
+										<div class="event-gallery">
+											<div class="brazzers-gallery">
+												<div class="brazzers-gallery__page brazzers-gallery__page_column_4">
+													<div class="brazzers-gallery__image-wrapper">
+														<img src="img/expo/expo-1.jpg" alt="">
+													</div>
+													<div class="brazzers-gallery__button"></div>
+												</div>
+												<div class="brazzers-gallery__page brazzers-gallery__page_column_4">
+													<div class="brazzers-gallery__image-wrapper">
+														<img src="img/expo/expo-3.jpg" alt="">
+													</div>
+													<div class="brazzers-gallery__button"></div>
+												</div>
+												<div class="brazzers-gallery__page brazzers-gallery__page_column_4">
+													<div class="brazzers-gallery__image-wrapper">
+														<img src="img/expo/expo-4.jpg" alt="">
+													</div>
+													<div class="brazzers-gallery__button"></div>
+												</div>
+												<div class="brazzers-gallery__page brazzers-gallery__page_column_4">
+													<div class="brazzers-gallery__image-wrapper">
+														<img src="img/expo/expo-5.jpg" alt="">
+													</div>
+													<div class="brazzers-gallery__button"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="event-inner">
+										<div class="head">Индустриализация и зарождение дизайна (XVIII - начало XXвв.)</div>
+										<div class="event-position">
+											<span class="location">д. Любельполь, Брестская обл.</span>
+											<span class="time">XXI  в.</span>
+										</div>
+										<p>В экспозиции музея вы повстречаете самые значимые архитектурные достопримечательности, в том числе малоизвестные, познакомитесь с интересными фактами из истории замков, дворцов, усадеб, храмов.</p>
+									</div>
+									<div class="btn blue small arrow"></div>
+								</a>
+								<a href="#" class="event-item">
+									<div class="case-img">
+										<img src="img/expo/expo-3.jpg" alt="">
+										<div class="event-gallery">
+											<div class="brazzers-gallery">
+												<div class="brazzers-gallery__page brazzers-gallery__page_column_3">
+													<div class="brazzers-gallery__image-wrapper">
+														<img src="img/expo/expo-2.jpg" alt="">
+													</div>
+													<div class="brazzers-gallery__button"></div>
+												</div>
+												<div class="brazzers-gallery__page brazzers-gallery__page_column_3">
+													<div class="brazzers-gallery__image-wrapper">
+														<img src="img/expo/expo-5.jpg" alt="">
+													</div>
+													<div class="brazzers-gallery__button"></div>
+												</div>
+												<div class="brazzers-gallery__page brazzers-gallery__page_column_3">
+													<div class="brazzers-gallery__image-wrapper">
+														<img src="img/expo/expo-4.jpg" alt="">
+													</div>
+													<div class="brazzers-gallery__button"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="event-inner">
+										<div class="head">Индустриализация и зарождение дизайна (XVIII - начало XXвв.)</div>
+										<div class="event-position">
+											<span class="location">д. Любельполь, Брестская обл.</span>
+											<span class="time">XXI  в.</span>
+										</div>
+										<p>В экспозиции музея вы повстречаете самые значимые архитектурные достопримечательности, в том числе малоизвестные, познакомитесь с интересными фактами из истории замков, дворцов, усадеб, храмов.</p>
+									</div>
+									<div class="btn blue small arrow"></div>
+								</a>
+							</div>
+							<div class="load-more">
+								<a href="" class="btn yellow">
+									<span><i class="icon"></i>загрузить еще</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="container container-banner">
+				<div class="l">
+					<div class="row">
+						<div class="col-66">
+							<div class="banner-content">
+								<div class="banner-top">Приглашаем на экскурсию</div>
+								<div class="banner-title">70 точных архитектурных  копий воссозданны в деталях</div>
+								<p>Каждый посетитель может просмотреть экспозицию самостоятельно, присоединиться к экскурсии, или воспользоваться аудиогидом</p>
+								<div class="banner-navigation">
+									<a href="" class="btn blue">
+										<span>Заказать экскурсию</span>
+									</a>
+									<a href="" class="btn yellow">
+										<span>Посетить музей</span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-33">
+							<div class="banner-img">
+								<img src="img/pattern/Library.png" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		<div class="push"></div>
+	</div>
+	//= includes/footer.html
+</div>
+//= includes/popups.html
+//= includes/scrolltop.html
+</body>
+</html>
